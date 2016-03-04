@@ -7,8 +7,8 @@
  <meta name="viewport" content="width=device-width">
  </head>
  <body>
-  <h1>1st website</h1>
-  <a href="sitetwo.php">Click for second site</a>
+  <h1>2nd web site</h1>
+  <a href="index.php">Click for first site</a>
   <ul>
    <li>Item 1</li>
    <li>Item 2</li>
