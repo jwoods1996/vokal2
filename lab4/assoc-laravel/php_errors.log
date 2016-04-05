@@ -1,0 +1,64 @@
+[01-Apr-2016 10:32:06 UTC] PHP Fatal error:  Call to undefined function getPms() in /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php on line 41
+[01-Apr-2016 10:32:06 UTC] PHP Stack trace:
+[01-Apr-2016 10:32:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:0
+[01-Apr-2016 10:32:06 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:49
+[01-Apr-2016 10:32:06 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[01-Apr-2016 10:32:06 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[01-Apr-2016 10:32:06 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[01-Apr-2016 10:32:06 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[01-Apr-2016 10:32:06 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[01-Apr-2016 10:32:06 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:745
+[01-Apr-2016 10:32:06 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:775
+[01-Apr-2016 10:32:06 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1001
+[01-Apr-2016 10:32:06 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1033
+[01-Apr-2016 10:32:06 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:32:06 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:25-34}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:32:06 UTC] PHP  14. search() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:31
+[01-Apr-2016 10:34:30 UTC] PHP Fatal error:  Call to undefined function getUsers() in /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php on line 42
+[01-Apr-2016 10:34:30 UTC] PHP Stack trace:
+[01-Apr-2016 10:34:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:0
+[01-Apr-2016 10:34:30 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:49
+[01-Apr-2016 10:34:30 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[01-Apr-2016 10:34:30 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[01-Apr-2016 10:34:30 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[01-Apr-2016 10:34:30 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[01-Apr-2016 10:34:30 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[01-Apr-2016 10:34:30 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:745
+[01-Apr-2016 10:34:30 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:775
+[01-Apr-2016 10:34:30 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1001
+[01-Apr-2016 10:34:30 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1033
+[01-Apr-2016 10:34:30 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:34:30 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:25-35}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:34:30 UTC] PHP  14. search() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:32
+[01-Apr-2016 10:35:56 UTC] PHP Fatal error:  Call to undefined function getpms() in /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php on line 42
+[01-Apr-2016 10:35:56 UTC] PHP Stack trace:
+[01-Apr-2016 10:35:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:0
+[01-Apr-2016 10:35:56 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:49
+[01-Apr-2016 10:35:56 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[01-Apr-2016 10:35:56 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[01-Apr-2016 10:35:56 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[01-Apr-2016 10:35:56 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[01-Apr-2016 10:35:56 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[01-Apr-2016 10:35:56 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:745
+[01-Apr-2016 10:35:56 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:775
+[01-Apr-2016 10:35:56 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1001
+[01-Apr-2016 10:35:56 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1033
+[01-Apr-2016 10:35:56 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:35:56 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:25-35}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:35:56 UTC] PHP  14. search() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:32
+[01-Apr-2016 10:36:11 UTC] PHP Fatal error:  Call to undefined function getPms() in /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php on line 42
+[01-Apr-2016 10:36:11 UTC] PHP Stack trace:
+[01-Apr-2016 10:36:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:0
+[01-Apr-2016 10:36:11 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:49
+[01-Apr-2016 10:36:11 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[01-Apr-2016 10:36:11 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[01-Apr-2016 10:36:11 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[01-Apr-2016 10:36:11 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[01-Apr-2016 10:36:11 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[01-Apr-2016 10:36:11 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:745
+[01-Apr-2016 10:36:11 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:775
+[01-Apr-2016 10:36:11 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1001
+[01-Apr-2016 10:36:11 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1033
+[01-Apr-2016 10:36:11 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:36:11 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:25-35}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:36:11 UTC] PHP  14. search() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:32

@@ -1,0 +1,249 @@
+[01-Apr-2016 10:32:06 UTC] PHP Fatal error:  Call to undefined function getPms() in /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php on line 41
+[01-Apr-2016 10:32:06 UTC] PHP Stack trace:
+[01-Apr-2016 10:32:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:0
+[01-Apr-2016 10:32:06 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:49
+[01-Apr-2016 10:32:06 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[01-Apr-2016 10:32:06 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[01-Apr-2016 10:32:06 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[01-Apr-2016 10:32:06 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[01-Apr-2016 10:32:06 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[01-Apr-2016 10:32:06 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:745
+[01-Apr-2016 10:32:06 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:775
+[01-Apr-2016 10:32:06 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1001
+[01-Apr-2016 10:32:06 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1033
+[01-Apr-2016 10:32:06 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:32:06 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:25-34}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:32:06 UTC] PHP  14. search() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:31
+[01-Apr-2016 10:34:30 UTC] PHP Fatal error:  Call to undefined function getUsers() in /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php on line 42
+[01-Apr-2016 10:34:30 UTC] PHP Stack trace:
+[01-Apr-2016 10:34:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:0
+[01-Apr-2016 10:34:30 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:49
+[01-Apr-2016 10:34:30 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[01-Apr-2016 10:34:30 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[01-Apr-2016 10:34:30 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[01-Apr-2016 10:34:30 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[01-Apr-2016 10:34:30 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[01-Apr-2016 10:34:30 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:745
+[01-Apr-2016 10:34:30 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:775
+[01-Apr-2016 10:34:30 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1001
+[01-Apr-2016 10:34:30 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1033
+[01-Apr-2016 10:34:30 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:34:30 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:25-35}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:34:30 UTC] PHP  14. search() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:32
+[01-Apr-2016 10:35:56 UTC] PHP Fatal error:  Call to undefined function getpms() in /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php on line 42
+[01-Apr-2016 10:35:56 UTC] PHP Stack trace:
+[01-Apr-2016 10:35:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:0
+[01-Apr-2016 10:35:56 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:49
+[01-Apr-2016 10:35:56 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[01-Apr-2016 10:35:56 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[01-Apr-2016 10:35:56 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[01-Apr-2016 10:35:56 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[01-Apr-2016 10:35:56 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[01-Apr-2016 10:35:56 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:745
+[01-Apr-2016 10:35:56 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:775
+[01-Apr-2016 10:35:56 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1001
+[01-Apr-2016 10:35:56 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1033
+[01-Apr-2016 10:35:56 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:35:56 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:25-35}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:35:56 UTC] PHP  14. search() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:32
+[01-Apr-2016 10:36:11 UTC] PHP Fatal error:  Call to undefined function getPms() in /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php on line 42
+[01-Apr-2016 10:36:11 UTC] PHP Stack trace:
+[01-Apr-2016 10:36:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:0
+[01-Apr-2016 10:36:11 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/public/index.php:49
+[01-Apr-2016 10:36:11 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[01-Apr-2016 10:36:11 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[01-Apr-2016 10:36:11 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[01-Apr-2016 10:36:11 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[01-Apr-2016 10:36:11 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[01-Apr-2016 10:36:11 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:745
+[01-Apr-2016 10:36:11 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:775
+[01-Apr-2016 10:36:11 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1001
+[01-Apr-2016 10:36:11 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1033
+[01-Apr-2016 10:36:11 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:36:11 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:25-35}() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php:109
+[01-Apr-2016 10:36:11 UTC] PHP  14. search() /home/ubuntu/workspace/2503ict/lab4/assoc-laravel/app/routes.php:32
+[05-Apr-2016 07:39:01 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/ubuntu/workspace/2503ict/lab4/social-network/app/routes.php on line 27
+[05-Apr-2016 07:39:01 UTC] PHP Stack trace:
+[05-Apr-2016 07:39:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:0
+[05-Apr-2016 07:39:01 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:49
+[05-Apr-2016 07:39:01 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[05-Apr-2016 07:39:01 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[05-Apr-2016 07:39:01 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[05-Apr-2016 07:39:01 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[05-Apr-2016 07:39:01 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[05-Apr-2016 07:39:01 UTC] PHP   8. Illuminate\Foundation\Application->boot() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:743
+[05-Apr-2016 07:39:01 UTC] PHP   9. Illuminate\Foundation\Application->bootApplication() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:587
+[05-Apr-2016 07:39:01 UTC] PHP  10. Illuminate\Foundation\Application->fireAppCallbacks() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:604
+[05-Apr-2016 07:39:01 UTC] PHP  11. call_user_func:{/home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:830}() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:830
+[05-Apr-2016 07:39:01 UTC] PHP  12. {closure:/home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/start.php:223-271}() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:830
+[05-Apr-2016 08:08:20 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/2503ict/lab4/social-network/app/routes.php on line 53
+[05-Apr-2016 08:08:20 UTC] PHP Stack trace:
+[05-Apr-2016 08:08:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:0
+[05-Apr-2016 08:08:20 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:49
+[05-Apr-2016 08:08:20 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[05-Apr-2016 08:08:20 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[05-Apr-2016 08:08:20 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[05-Apr-2016 08:08:20 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[05-Apr-2016 08:08:20 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[05-Apr-2016 08:08:20 UTC] PHP   8. Illuminate\Foundation\Application->boot() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:743
+[05-Apr-2016 08:08:20 UTC] PHP   9. Illuminate\Foundation\Application->bootApplication() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:587
+[05-Apr-2016 08:08:20 UTC] PHP  10. Illuminate\Foundation\Application->fireAppCallbacks() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:604
+[05-Apr-2016 08:08:20 UTC] PHP  11. call_user_func:{/home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:830}() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:830
+[05-Apr-2016 08:08:20 UTC] PHP  12. {closure:/home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/start.php:223-271}() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:830
+[05-Apr-2016 08:08:42 UTC] PHP Warning:  Uncaught exception 'ErrorException' with message 'require(posts/friends.php): failed to open stream: No such file or directory' in /home/ubuntu/workspace/2503ict/lab4/social-network/app/routes.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/2503ict/lab4/social-network/app/routes.php(16): Illuminate\Exception\Handler->handleError(2, 'require(posts/f...', '/home/ubuntu/wo...', 16, Array)
+#1 /home/ubuntu/workspace/2503ict/lab4/social-network/app/routes.php(16): require()
+#2 /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/start.php(269): require('/home/ubuntu/wo...')
+#3 [internal function]: {closure}(Object(Illuminate\Foundation\Application))
+#4 /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(830): call_user_func(Object(Closure), Object(Illuminate\Foundation\Application))
+#5 /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(60 in /home/ubuntu/workspace/2503ict/lab4/social-network/app/routes.php on line 16
+[05-Apr-2016 08:08:42 UTC] PHP Stack trace:
+[05-Apr-2016 08:08:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:0
+[05-Apr-2016 08:08:42 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:49
+[05-Apr-2016 08:08:42 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[05-Apr-2016 08:08:42 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[05-Apr-2016 08:08:42 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[05-Apr-2016 08:08:42 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[05-Apr-2016 08:08:42 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[05-Apr-2016 08:08:42 UTC] PHP   8. Illuminate\Foundation\Application->boot() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:743
+[05-Apr-2016 08:08:42 UTC] PHP   9. Illuminate\Foundation\Application->bootApplication() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:587
+[05-Apr-2016 08:08:42 UTC] PHP  10. Illuminate\Foundation\Application->fireAppCallbacks() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:604
+[05-Apr-2016 08:08:42 UTC] PHP  11. call_user_func:{/home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:830}() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:830
+[05-Apr-2016 08:08:42 UTC] PHP  12. {closure:/home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/start.php:223-271}() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:830
+[05-Apr-2016 08:08:42 UTC] PHP  13. require() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/start.php:269
+[05-Apr-2016 08:08:42 UTC] PHP Fatal error:  main(): Failed opening required 'posts/friends.php' (include_path='/home/ubuntu/workspace/2503ict/lab4/social-network/vendor/phpseclib/phpseclib/phpseclib:.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/2503ict/lab4/social-network/app/routes.php on line 15
+[05-Apr-2016 08:08:42 UTC] PHP Stack trace:
+[05-Apr-2016 08:08:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:0
+[05-Apr-2016 08:08:42 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:49
+[05-Apr-2016 08:08:42 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[05-Apr-2016 08:08:42 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[05-Apr-2016 08:08:42 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[05-Apr-2016 08:08:42 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[05-Apr-2016 08:08:42 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[05-Apr-2016 08:08:42 UTC] PHP   8. Illuminate\Foundation\Application->boot() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:743
+[05-Apr-2016 08:08:42 UTC] PHP   9. Illuminate\Foundation\Application->bootApplication() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:587
+[05-Apr-2016 08:08:42 UTC] PHP  10. Illuminate\Foundation\Application->fireAppCallbacks() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:604
+[05-Apr-2016 08:08:42 UTC] PHP  11. call_user_func:{/home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:830}() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:830
+[05-Apr-2016 08:08:42 UTC] PHP  12. {closure:/home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/start.php:223-271}() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:830
+[05-Apr-2016 08:08:42 UTC] PHP  13. require() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/start.php:269
+[05-Apr-2016 08:12:09 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/2503ict/lab4/social-network/app/storage/views/85ad589ebf6c49203875965bbe715496 on line 28
+[05-Apr-2016 08:12:09 UTC] PHP Stack trace:
+[05-Apr-2016 08:12:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:0
+[05-Apr-2016 08:12:09 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:49
+[05-Apr-2016 08:12:09 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[05-Apr-2016 08:12:09 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[05-Apr-2016 08:12:09 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[05-Apr-2016 08:12:09 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[05-Apr-2016 08:12:09 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[05-Apr-2016 08:12:09 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:745
+[05-Apr-2016 08:12:09 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:775
+[05-Apr-2016 08:12:09 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1001
+[05-Apr-2016 08:12:09 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1036
+[05-Apr-2016 08:12:09 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1501
+[05-Apr-2016 08:12:09 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php:202
+[05-Apr-2016 08:12:09 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Http/Response.php:43
+[05-Apr-2016 08:12:09 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:78
+[05-Apr-2016 08:12:09 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:109
+[05-Apr-2016 08:12:09 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:140
+[05-Apr-2016 08:12:09 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[05-Apr-2016 08:13:41 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/ubuntu/workspace/2503ict/lab4/social-network/app/storage/views/85ad589ebf6c49203875965bbe715496 on line 19
+[05-Apr-2016 08:13:41 UTC] PHP Stack trace:
+[05-Apr-2016 08:13:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:0
+[05-Apr-2016 08:13:41 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:49
+[05-Apr-2016 08:13:41 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[05-Apr-2016 08:13:41 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[05-Apr-2016 08:13:41 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[05-Apr-2016 08:13:41 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[05-Apr-2016 08:13:41 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[05-Apr-2016 08:13:41 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:745
+[05-Apr-2016 08:13:41 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:775
+[05-Apr-2016 08:13:41 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1001
+[05-Apr-2016 08:13:41 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1036
+[05-Apr-2016 08:13:41 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1501
+[05-Apr-2016 08:13:41 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php:202
+[05-Apr-2016 08:13:41 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Http/Response.php:43
+[05-Apr-2016 08:13:41 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:78
+[05-Apr-2016 08:13:41 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:109
+[05-Apr-2016 08:13:41 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:140
+[05-Apr-2016 08:13:41 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[05-Apr-2016 08:18:43 UTC] PHP Fatal error:  Cannot use [] for reading in /home/ubuntu/workspace/2503ict/lab4/social-network/app/storage/views/85ad589ebf6c49203875965bbe715496 on line 19
+[05-Apr-2016 08:18:43 UTC] PHP Stack trace:
+[05-Apr-2016 08:18:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:0
+[05-Apr-2016 08:18:43 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:49
+[05-Apr-2016 08:18:43 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[05-Apr-2016 08:18:43 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[05-Apr-2016 08:18:43 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[05-Apr-2016 08:18:43 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[05-Apr-2016 08:18:43 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[05-Apr-2016 08:18:43 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:745
+[05-Apr-2016 08:18:43 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:775
+[05-Apr-2016 08:18:43 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1001
+[05-Apr-2016 08:18:43 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1036
+[05-Apr-2016 08:18:43 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1501
+[05-Apr-2016 08:18:43 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php:202
+[05-Apr-2016 08:18:43 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Http/Response.php:43
+[05-Apr-2016 08:18:43 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:78
+[05-Apr-2016 08:18:43 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:109
+[05-Apr-2016 08:18:43 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:140
+[05-Apr-2016 08:18:43 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[05-Apr-2016 08:22:29 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/2503ict/lab4/social-network/app/storage/views/85ad589ebf6c49203875965bbe715496 on line 12
+[05-Apr-2016 08:22:29 UTC] PHP Stack trace:
+[05-Apr-2016 08:22:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:0
+[05-Apr-2016 08:22:29 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:49
+[05-Apr-2016 08:22:29 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[05-Apr-2016 08:22:29 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[05-Apr-2016 08:22:29 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[05-Apr-2016 08:22:29 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[05-Apr-2016 08:22:29 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[05-Apr-2016 08:22:29 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:745
+[05-Apr-2016 08:22:29 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:775
+[05-Apr-2016 08:22:29 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1001
+[05-Apr-2016 08:22:29 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1036
+[05-Apr-2016 08:22:29 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1501
+[05-Apr-2016 08:22:29 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php:202
+[05-Apr-2016 08:22:29 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Http/Response.php:43
+[05-Apr-2016 08:22:29 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:78
+[05-Apr-2016 08:22:29 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:109
+[05-Apr-2016 08:22:29 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:140
+[05-Apr-2016 08:22:29 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[05-Apr-2016 08:23:19 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/2503ict/lab4/social-network/app/storage/views/85ad589ebf6c49203875965bbe715496 on line 12
+[05-Apr-2016 08:23:19 UTC] PHP Stack trace:
+[05-Apr-2016 08:23:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:0
+[05-Apr-2016 08:23:19 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:49
+[05-Apr-2016 08:23:19 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[05-Apr-2016 08:23:19 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[05-Apr-2016 08:23:19 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[05-Apr-2016 08:23:19 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[05-Apr-2016 08:23:19 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[05-Apr-2016 08:23:19 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:745
+[05-Apr-2016 08:23:19 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:775
+[05-Apr-2016 08:23:19 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1001
+[05-Apr-2016 08:23:19 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1036
+[05-Apr-2016 08:23:19 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1501
+[05-Apr-2016 08:23:19 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php:202
+[05-Apr-2016 08:23:19 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Http/Response.php:43
+[05-Apr-2016 08:23:19 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:78
+[05-Apr-2016 08:23:19 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:109
+[05-Apr-2016 08:23:19 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:140
+[05-Apr-2016 08:23:19 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[05-Apr-2016 08:24:35 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/2503ict/lab4/social-network/app/storage/views/85ad589ebf6c49203875965bbe715496 on line 13
+[05-Apr-2016 08:24:35 UTC] PHP Stack trace:
+[05-Apr-2016 08:24:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:0
+[05-Apr-2016 08:24:35 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/lab4/social-network/public/index.php:49
+[05-Apr-2016 08:24:35 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:641
+[05-Apr-2016 08:24:35 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/stack/builder/src/Stack/StackedHttpKernel.php:23
+[05-Apr-2016 08:24:35 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Guard.php:51
+[05-Apr-2016 08:24:35 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Cookie/Queue.php:47
+[05-Apr-2016 08:24:35 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Session/Middleware.php:72
+[05-Apr-2016 08:24:35 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:745
+[05-Apr-2016 08:24:35 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:775
+[05-Apr-2016 08:24:35 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1001
+[05-Apr-2016 08:24:35 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1036
+[05-Apr-2016 08:24:35 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Routing/Router.php:1501
+[05-Apr-2016 08:24:35 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php:202
+[05-Apr-2016 08:24:35 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/Http/Response.php:43
+[05-Apr-2016 08:24:35 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:78
+[05-Apr-2016 08:24:35 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:109
+[05-Apr-2016 08:24:35 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/View.php:140
+[05-Apr-2016 08:24:35 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/lab4/social-network/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
