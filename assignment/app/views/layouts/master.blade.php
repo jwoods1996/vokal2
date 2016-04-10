@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>@yield('title')</title>
+        <title></title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -21,26 +21,20 @@
                         FirstName Lastname <!-- Placehold -->
                     </div><!-- User Info -->
                     <div class="btn-group-vertical" role="group">
-                          <button type="button" class="btn btn-default">Friends</button>
-                          <button type="button" class="btn btn-default">Messages</button>
-                          <button type="button" class="btn btn-default">Notification</button>
-                          <button type="button" class="btn btn-default">Settings</button>
+                          <button type="button" class="btn btn-default"><a href='friends'>Friends</a></button>
+                          <button type="button" class="btn btn-default"><a href='messages'>Messages</a></button>
+                          <button type="button" class="btn btn-default"><a href='notifications'>Notifications</a></button>
+                          <button type="button" class="btn btn-default"><a href='settings'>Settings</a></button>
                           <button type="button" class="btn btn-default">Logout</button>
                     </div>
                 </div><!-- Sidebar -->
             </div>
             <div class='col-sm-8'>
-                <form>
-                    Name: <br>
-                    <input type="text" name="enterName"/><br>
-                    Message: <br>
-                    <input type="textarea" name="enterMessage"/><br>
-                    <button>Submit</button>
-                </form>
+                @section('postForm')
+                @show
                 <div class='postBox'>
-                    Title</br>
-                    Posted by FirstName Lastname</br>
-                    Lorem Ipsum
+                @section('postContainer')
+                @show
                 </div>
             </div>
         </div><!-- /.container -->

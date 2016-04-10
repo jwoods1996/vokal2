@@ -1,5 +1,5 @@
 @extends('layouts.master')
 
-@section('notificationList')
+@section('friendsList')
 
 @stop

@@ -11,7 +11,49 @@
 |
 */
 
+require "models/posts.php";
+
 Route::get('/', function()
 {
-	return View::make('layouts.master');
+  $posts = displayPosts();
+  return View::make('social.feed')->with('posts', $posts);
 });
+
+function displayPosts() {
+  $posts = getPosts();
+  return $posts;
+}
+
+Route::get('/editor', function()
+{
+    return View::make('social.editor');
+});
+
+Route::get('/friends', function()
+{
+    return View::make('social.friends');
+});
+
+Route::get('/messages', function()
+{
+    return View::make('social.messages');
+});
+
+Route::get('/notifications', function()
+{
+    return View::make('social.notifications');
+});
+
+
+
+
+Route::get('add_post_action', function()
+{
+
+});
+
+function add_post($name, $message)
+{
+} 
+
+
