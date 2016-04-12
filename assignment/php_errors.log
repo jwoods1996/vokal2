@@ -531,3 +531,73 @@
 [10-Apr-2016 13:45:57 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5065
 [10-Apr-2016 13:45:57 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398
 [10-Apr-2016 13:45:57 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/assignment/app/routes.php:49-59}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398
+[12-Apr-2016 07:31:50 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/a041e270a4e741c1f64b8f84851eeb98 on line 24
+[12-Apr-2016 07:31:50 UTC] PHP Stack trace:
+[12-Apr-2016 07:31:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[12-Apr-2016 07:31:50 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[12-Apr-2016 07:31:50 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[12-Apr-2016 07:31:50 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[12-Apr-2016 07:31:50 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[12-Apr-2016 07:31:50 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[12-Apr-2016 07:31:50 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[12-Apr-2016 07:31:50 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[12-Apr-2016 07:31:50 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[12-Apr-2016 07:31:50 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[12-Apr-2016 07:31:50 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[12-Apr-2016 07:31:50 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[12-Apr-2016 07:31:50 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[12-Apr-2016 07:31:50 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[12-Apr-2016 07:31:50 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[12-Apr-2016 07:31:50 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[12-Apr-2016 07:31:50 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[12-Apr-2016 07:31:50 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[12-Apr-2016 07:31:50 UTC] PHP  19. include() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9954
+[12-Apr-2016 07:42:12 UTC] PHP Fatal error:  Call to undefined function add_item() in /home/ubuntu/workspace/2503ict/assignment/app/routes.php on line 55
+[12-Apr-2016 07:42:12 UTC] PHP Stack trace:
+[12-Apr-2016 07:42:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[12-Apr-2016 07:42:12 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[12-Apr-2016 07:42:12 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[12-Apr-2016 07:42:12 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[12-Apr-2016 07:42:12 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[12-Apr-2016 07:42:12 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[12-Apr-2016 07:42:12 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[12-Apr-2016 07:42:12 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[12-Apr-2016 07:42:12 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[12-Apr-2016 07:42:12 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[12-Apr-2016 07:42:12 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5065
+[12-Apr-2016 07:42:12 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398
+[12-Apr-2016 07:42:12 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/assignment/app/routes.php:51-65}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398
+[12-Apr-2016 07:44:31 UTC] PHP Fatal error:  Call to undefined method Illuminate\Http\Request::post() in /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php on line 3267
+[12-Apr-2016 07:44:31 UTC] PHP Stack trace:
+[12-Apr-2016 07:44:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[12-Apr-2016 07:44:31 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[12-Apr-2016 07:44:31 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[12-Apr-2016 07:44:31 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[12-Apr-2016 07:44:31 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[12-Apr-2016 07:44:31 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[12-Apr-2016 07:44:31 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[12-Apr-2016 07:44:31 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[12-Apr-2016 07:44:31 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[12-Apr-2016 07:44:31 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[12-Apr-2016 07:44:31 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5065
+[12-Apr-2016 07:44:31 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398
+[12-Apr-2016 07:44:31 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/assignment/app/routes.php:51-57}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398
+[12-Apr-2016 07:44:31 UTC] PHP  14. Illuminate\Support\Facades\Input::post() /home/ubuntu/workspace/2503ict/assignment/app/routes.php:53
+[12-Apr-2016 07:44:31 UTC] PHP  15. Illuminate\Support\Facades\Facade::__callStatic() /home/ubuntu/workspace/2503ict/assignment/app/routes.php:53
+[12-Apr-2016 07:44:39 UTC] PHP Fatal error:  Call to undefined method Illuminate\Http\Request::post() in /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php on line 3267
+[12-Apr-2016 07:44:39 UTC] PHP Stack trace:
+[12-Apr-2016 07:44:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[12-Apr-2016 07:44:39 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[12-Apr-2016 07:44:39 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[12-Apr-2016 07:44:39 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[12-Apr-2016 07:44:39 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[12-Apr-2016 07:44:39 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[12-Apr-2016 07:44:39 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[12-Apr-2016 07:44:39 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[12-Apr-2016 07:44:39 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[12-Apr-2016 07:44:39 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[12-Apr-2016 07:44:39 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5065
+[12-Apr-2016 07:44:39 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398
+[12-Apr-2016 07:44:39 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/assignment/app/routes.php:51-57}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398
+[12-Apr-2016 07:44:39 UTC] PHP  14. Illuminate\Support\Facades\Input::post() /home/ubuntu/workspace/2503ict/assignment/app/routes.php:53
+[12-Apr-2016 07:44:39 UTC] PHP  15. Illuminate\Support\Facades\Facade::__callStatic() /home/ubuntu/workspace/2503ict/assignment/app/routes.php:53

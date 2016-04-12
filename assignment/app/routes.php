@@ -20,8 +20,9 @@ Route::get('/', function()
 });
 
 function displayPosts() {
-  $posts = getPosts();
-  return $posts;
+    $sql = "select * from posts";
+    $posts = DB::select($sql);
+    return $posts;
 }
 
 Route::get('/editor', function()
@@ -47,13 +48,20 @@ Route::get('/notifications', function()
 
 
 
-Route::get('add_post_action', function()
+Route::post('add_post_action', function()
 {
+    $name = $_POST["name"];
+    $message = $_POST["message"];
+    $id = add_post($name, $message);
 
 });
 
 function add_post($name, $message)
 {
+    $sql = "insert into posts (image, name, message) values (?, ?, ?)";
+    DB::insert($sql, array('http://rockstartemplate.com/blogheaders/bannerdesign1.jpg', $name, $message));
+    $id = DB::getPdo()->lastInsertId();
+    return $id;
 } 
 
 
