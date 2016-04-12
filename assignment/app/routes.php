@@ -57,9 +57,10 @@ Route::get('/notifications', function()
 Route::post('add_post_action', function()
 {
     $time = date(DATE_ATOM);
+    $title = $_POST["title"];
     $name = $_POST["name"];
     $message = $_POST["message"];
-    $id = add_post($name, $message, $time);
+    $id = add_post($title, $name, $message, $time);
     return Redirect::to("/feed");
 
 });
@@ -76,10 +77,10 @@ function delete_post($postid) {
     $sql = "delete from posts where id = ?";
     DB::delete($sql, array($postid));
 }
-function add_post($name, $message, $time)
+function add_post($title, $name, $message, $time)
 {
-    $sql = "insert into posts (image, name, message, time) values (?, ?, ?, ?)";
-    DB::insert($sql, array('http://rockstartemplate.com/blogheaders/bannerdesign1.jpg', $name, $message, $time));
+    $sql = "insert into posts (image, title, name, message, time) values (?, ?, ?, ?, ?)";
+    DB::insert($sql, array('http://rockstartemplate.com/blogheaders/bannerdesign1.jpg', $title, $name, $message, $time));
     $order = "select * from posts order by time DESC";
     DB::statement($order);
     $id = DB::getPdo()->lastInsertId();

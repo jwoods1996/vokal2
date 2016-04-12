@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: #121f2e; /* Old browsers */
+    background: -moz-linear-gradient(top,  #121f2e 0%, #a2a9a9 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #121f2e 0%,#a2a9a9 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #121f2e 0%,#a2a9a9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#121f2e', endColorstr='#a2a9a9',GradientType=0 ); /* IE6-9 */
+
+}
+.postContainer {
+    background: #283341;
+}
+.postBox {
+    padding: 1em;
+    background: #5F666F;
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.postIcon {
+    float: left
+}
+.postHeader {
+    display: block;
+}
+
+.postDescription {
+    clear: right;
+    float: left;
+    color: #CCCCCC;
+    display: block;
+}
+
+.postTitle {
+    font-weight: bold;
+}
+
+.postName {
+    font-style: italic;
+}
+.postOptions {
+    float: right;
+}
+.postFeed {
+    background: #283341;
+    border: 2px solid black;
+    padding: 1%;
+}
+.postContent {
+    clear: left;
+    background: #CCCCCC;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.postComments {
+    display: inline;
+    float: right;
+}
+
+.feedTitle {
+    color: #CCCCCC;
+    font-weight: bold;
+    font-size: large;
+    font-style: italic;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.commentCount {
+    padding-right: 1em;
+    color: #CCCCCC;
+}
+
+.commentLink a {
+    color: #CCCCCC;
+}
+.container {
+    padding: 0px;
+    margin: 0px;
+}
+.sidebar {
+    color: #CCCCCC;
+    height: 100%;
+    border-right: 2px solid black;
+    background: #3a464f; /* Old browsers */
+    background: -moz-linear-gradient(left, #3a464f 0%, #13202f 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #3a464f 0%,#13202f 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #3a464f 0%,#13202f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a464f', endColorstr='#13202f',GradientType=1 ); /* IE6-9 */
+}
+
+.col-sm-4 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.postForm {
+    width: 50%;
+    color: #CCCCCC;
+    background: #283341;
+    border: 2px solid black;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.submitButton {
+    display: block;
+    color: black;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom:4px;
+}
+
+.form-fields {
+    margin: 8px;
+    padding: 1em;
+    background: #5A626C;
+}
+
+.form-field {
+    background: #CCCCCC;
+    border: 1px solid black;
+    margin-bottom: 0.2em;
+    color: black;
+    width: 40%;
+    border-radius: 5px;
+}
+textarea {
+    background: #CCCCCC;
+    border: 1px solid black;
+    margin-bottom: 0.2em;
+    color: black;
+    width: 100%;
+    border-radius: 5px;
+}
+.form-title {
+   margin-bottom: 0.1em;
+}
