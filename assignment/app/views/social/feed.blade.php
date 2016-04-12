@@ -28,6 +28,10 @@
     <tr>
         <td>{{{ $post->message }}}</td>
     </tr>
+    <tr>
+        <td>{{{ $post->time }}}</td>
+    </tr>
+    <button type="button" class="btn btn-default"><a href='{{{ url("delete_post_action/$post->id") }}}'>Delete</a></button>
     </table></br></br>
 @endforeach
 @stop
