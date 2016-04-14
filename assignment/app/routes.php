@@ -18,6 +18,7 @@ Route::get('/', function()
   $posts = displayPosts();
   return View::make('social.feed')->with('posts', $posts);
 });
+
 Route::get('/feed', function()
 {
 
@@ -25,36 +26,13 @@ Route::get('/feed', function()
   return View::make('social.feed')->with('posts', $posts);
 });
 
-
-Route::get('comments/{postid}', function($postid)
+Route::get('/comments/{postid}', function($postid)
 {
     $posts = displaySinglePost($postid);
     $comments = displayComments($postid);
-
     return View::make('social.comments')->withPosts($posts)->withComments($comments);
 });
-Route::get('add_comment_action/{postid}', function($postid)
-{
-    $name = $_POST["name"];
-    $message = $_POST["message"];
-    $id = add_comment($postid, $name, $message);
-    return Redirect::to("/comments/$postid");
-});
-function displayPosts() {
-    $sql = "select * from posts order by time DESC";
-    $posts = DB::select($sql);
-    return $posts;
-}
-function displaySinglePost($postid) {
-    $sql = "select * from posts where id = ?";
-    $posts = DB::select($sql, array($postid));
-    return $posts;
-}
-function displayComments() {
-    $sql = "select * from comments where postid = ?";
-    $comments = DB::select($sql);
-    return $comments;
-}
+
 Route::get('/editor', function()
 {
     return View::make('social.editor');
@@ -75,9 +53,6 @@ Route::get('/notifications', function()
     return View::make('social.notifications');
 });
 
-
-
-
 Route::post('add_post_action', function()
 {
     $time = date(DATE_ATOM);
@@ -89,6 +64,21 @@ Route::post('add_post_action', function()
 
 });
 
+Route::post('add_comment_action/{postid}', function($postid)
+{
+    $name = $_POST["name"];
+    $message = $_POST["message"];
+    $id = add_comment($postid, $name, $message);
+    return Redirect::to("/comments/$postid");
+});
+
+Route::get('delete_comment_action/{postid}/{commentid}', function($postid, $commentid)
+{   
+    delete_comment($commentid);
+    return Redirect::to("/comments/$postid");
+
+});
+
 Route::get('delete_post_action/{postid}', function($postid)
 {   
     delete_post($postid);
@@ -97,10 +87,18 @@ Route::get('delete_post_action/{postid}', function($postid)
 
 });
 
-function delete_post($postid) {
-    $sql = "delete from posts where id = ?";
-    DB::delete($sql, array($postid));
+function displayPosts() {
+    $sql = "select * from posts order by time DESC";
+    $posts = DB::select($sql);
+    return $posts;
 }
+
+function displaySinglePost($postid) {
+    $sql = "select * from posts where id = ?";
+    $posts = DB::select($sql, array($postid));
+    return $posts;
+}
+
 function add_post($title, $name, $message, $time)
 {
     $sql = "insert into posts (image, title, name, message, time) values (?, ?, ?, ?, ?)";
@@ -110,10 +108,28 @@ function add_post($title, $name, $message, $time)
     $id = DB::getPdo()->lastInsertId();
     return $id;
 } 
+
+function delete_post($postid) {
+    $sql = "delete from posts where id = ?";
+    DB::delete($sql, array($postid));
+}
+
+function displayComments($postid) {
+    $sql = "select * from comments where postid = ?";
+    $comments = DB::select($sql, array($postid));
+    return $comments;
+}
+
 function add_comment($postid, $name, $message)
 {
     $sql = "insert into comments (postid, name, message) values (?, ?, ?)";
     DB::insert($sql, array($postid, $name, $message));
     $id = DB::getPdo()->lastInsertId();
     return $id;
+}
+
+function delete_comment($commentid)
+{
+    $sql = "delete from comments where commentid = ?";
+    DB::delete($sql, array($commentid));
 }

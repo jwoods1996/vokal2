@@ -895,3 +895,48 @@
 [13-Apr-2016 16:02:05 UTC] PHP  10. Illuminate\Foundation\Application->fireAppCallbacks() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:641
 [13-Apr-2016 16:02:05 UTC] PHP  11. call_user_func:{/home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:736}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:736
 [13-Apr-2016 16:02:05 UTC] PHP  12. {closure:/home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/Foundation/start.php:223-271}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:736
+[14-Apr-2016 02:23:22 UTC] PHP Fatal error:  Call to undefined function delete_comment() in /home/ubuntu/workspace/2503ict/assignment/app/routes.php on line 77
+[14-Apr-2016 02:23:22 UTC] PHP Stack trace:
+[14-Apr-2016 02:23:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[14-Apr-2016 02:23:22 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[14-Apr-2016 02:23:22 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[14-Apr-2016 02:23:22 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[14-Apr-2016 02:23:22 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[14-Apr-2016 02:23:22 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[14-Apr-2016 02:23:22 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[14-Apr-2016 02:23:22 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[14-Apr-2016 02:23:22 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[14-Apr-2016 02:23:22 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[14-Apr-2016 02:23:22 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5065
+[14-Apr-2016 02:23:22 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398
+[14-Apr-2016 02:23:22 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/assignment/app/routes.php:75-81}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398
+[14-Apr-2016 02:24:19 UTC] PHP Fatal error:  Call to undefined function delete_comment() in /home/ubuntu/workspace/2503ict/assignment/app/routes.php on line 77
+[14-Apr-2016 02:24:19 UTC] PHP Stack trace:
+[14-Apr-2016 02:24:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[14-Apr-2016 02:24:19 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[14-Apr-2016 02:24:19 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[14-Apr-2016 02:24:19 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[14-Apr-2016 02:24:19 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[14-Apr-2016 02:24:19 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[14-Apr-2016 02:24:19 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[14-Apr-2016 02:24:19 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[14-Apr-2016 02:24:19 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[14-Apr-2016 02:24:19 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[14-Apr-2016 02:24:19 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5065
+[14-Apr-2016 02:24:19 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398
+[14-Apr-2016 02:24:19 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/assignment/app/routes.php:75-81}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398
+[14-Apr-2016 02:24:26 UTC] PHP Fatal error:  Call to undefined function delete_comment() in /home/ubuntu/workspace/2503ict/assignment/app/routes.php on line 77
+[14-Apr-2016 02:24:26 UTC] PHP Stack trace:
+[14-Apr-2016 02:24:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[14-Apr-2016 02:24:26 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[14-Apr-2016 02:24:26 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[14-Apr-2016 02:24:26 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[14-Apr-2016 02:24:26 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[14-Apr-2016 02:24:26 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[14-Apr-2016 02:24:26 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[14-Apr-2016 02:24:26 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[14-Apr-2016 02:24:26 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[14-Apr-2016 02:24:26 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[14-Apr-2016 02:24:26 UTC] PHP  11. Illuminate\Routing\Route->run() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5065
+[14-Apr-2016 02:24:26 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398
+[14-Apr-2016 02:24:26 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/assignment/app/routes.php:75-81}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398

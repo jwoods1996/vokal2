@@ -43,9 +43,6 @@
 </div>
 @stop
 
-@section('comments')
-
-@stop
 
 @section('comments')
 @foreach($comments as $comment)
@@ -61,7 +58,7 @@
                 </button>
                 <ul class="dropdown-menu">
                   <li><a href="#">Edit</a></li>
-                  <li><a href='{{{ url("delete_comment_action/$comment->id") }}}'>Delete</a></li>
+                  <li><a href='{{{ url("delete_comment_action/$post->id/$comment->commentid") }}}'>Delete</a></li>
                 </ul>
             </div>
         </di
