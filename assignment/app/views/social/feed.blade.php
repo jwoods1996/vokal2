@@ -13,7 +13,7 @@
            <div class="field-title">Message:</div>
            <textarea rows="2" cols="50" name="message" required></textarea><br>
         </div>
-        <div class='buttonBar'><input type="submit" class='formButton'></div>
+        <div class='buttonBar'><input type="submit" class='formButton saveButton'></div>
     </form>
     </div>
 @stop
@@ -29,7 +29,7 @@
     <div class='postBox'>
         <div class='postHeader'>
             <div class='postIcon'>
-                <img src='{{{ $post->image }}}' width='50px'>
+                <img src='{{{ $post->image }}}' width='50px' height='50px'>
             </div>
             <div class='postDescription'>
                 <span class='postTitle'>{{{ $post->title }}}</span></br>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
+        <title>Vokal</title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="{{{ secure_url('css/style.css') }}}" rel="stylesheet">
         <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>

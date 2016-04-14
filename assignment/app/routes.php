@@ -131,7 +131,7 @@ function displaySinglePost($postid) {
 function add_post($title, $name, $message, $time)
 {
     $sql = "insert into posts (image, title, name, message, time) values (?, ?, ?, ?, ?)";
-    DB::insert($sql, array('http://rockstartemplate.com/blogheaders/bannerdesign1.jpg', $title, $name, $message, $time));
+    DB::insert($sql, array('https://s3.amazonaws.com/whisperinvest-images/default.png', $title, $name, $message, $time));
     $order = "select * from posts order by time DESC";
     DB::statement($order);
     $id = DB::getPdo()->lastInsertId();
