@@ -3,7 +3,7 @@
 <!-- For the form to make a new post -->
 @section('postForm')
     <div class='postForm'>
-    <form method="post" action = '{{{ url('add_post_action') }}}' >
+    <form method="post" action = '{{{ secure_url('add_post_action') }}}' >
         <span class='formTitle'>Create a post..</span>
         <div class='form-fields'>
            <div class="field-title">Title:</div>

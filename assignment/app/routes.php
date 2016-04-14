@@ -72,8 +72,11 @@ Route::post('add_post_action', function()
 {
     $time = date(DATE_ATOM);
     $title = $_POST["title"];
+    $title = clean($title);
     $name = $_POST["name"];
+    $name = clean($name);
     $message = $_POST["message"];
+    $message = clean($message);
     $id = add_post($title, $name, $message, $time);
     //Redirect to the homepage
     return Redirect::to("/feed");
@@ -99,10 +102,11 @@ Route::post('edit_post_action/{postid}', function($postid)
         //Store the new data,
         $time = date(DATE_ATOM);
         $title = $_POST["title"];
-        $name = $_POST["name"];
+        $title = clean($title);
         $message = $_POST["message"];
+        $message = clean($message);
         //Call a function to change this data in the database, and
-        edit_post($postid, $title, $name, $message, $time);
+        edit_post($postid, $title, $message, $time);
         //Redirect to the comments page
         return Redirect::to("/comments/$postid");   
     //If the user clicked cancel,
@@ -126,7 +130,9 @@ Route::post('add_comment_action/{postid}', function($postid)
 {
     //Retrieve the data from the input fields
     $name = $_POST["name"];
+    $name = clean($name);
     $message = $_POST["message"];
+    $message = clean($message);
     //Call a function to submit the comment to the database
     $id = add_comment($postid, $name, $message);
     //Redirect to the same comments page
@@ -149,6 +155,7 @@ function displayPosts() {
     $sql = "select * from posts order by time DESC";
     $posts = DB::select($sql);
     return $posts;
+    
 }
 
 //Display only the revelant post, found with postid
@@ -166,9 +173,9 @@ function add_post($title, $name, $message, $time)
 } 
 
 //Update a post in the database
-function edit_post($postid, $title, $name, $message, $time) {
-    $sql = "UPDATE posts SET time=?,title=?,name=?,message=? WHERE id=?";
-    DB::update($sql, array($time, $title, $name, $message, $postid));
+function edit_post($postid, $title, $message, $time) {
+    $sql = "UPDATE posts SET time=?,title=?,message=? WHERE id=?";
+    DB::update($sql, array($time, $title, $message, $postid));
 }
 
 //Remove a post from the database, based on the post's id
@@ -196,4 +203,10 @@ function delete_comment($commentid)
 {
     $sql = "delete from comments where commentid = ?";
     DB::delete($sql, array($commentid));
+}
+
+function clean($input)
+{
+    $input = EscapeShellCmd($input);
+    return $input;    
 }

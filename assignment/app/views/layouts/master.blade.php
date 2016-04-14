@@ -51,6 +51,8 @@
                 @show
                 @section('comments')
                 @show
+                @section('documentation')
+                @show
             </div>
         </div><!-- /.container -->
     </body>

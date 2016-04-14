@@ -2,11 +2,11 @@ drop table if exists posts;
 
 CREATE TABLE posts (
   id INTEGER NOT NULL PRIMARY KEY autoincrement,
-  image,
+  image TEXT NOT NULL,
   title TEXT NOT NULL,
   name TEXT NOT NULL,
   message TEXT NOT NULL,
-  time
+  time DATE NOT NULL
 );
 
 drop table if exists comments;
@@ -17,7 +17,6 @@ CREATE TABLE comments (
   name TEXT NOT NULL,
   message TEXT NOT NULL
 );
-
 
 SELECT * FROM posts
 ORDER BY time DESC;
