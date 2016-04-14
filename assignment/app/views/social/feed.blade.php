@@ -48,7 +48,11 @@
             {{{ $post->message }}}
         </div>
         <div class='postComments'>
-            <span class='commentCount'>XY Comments</span><span class='commentLink'><a href='{{{ url("comments/$post->id") }}}'>View Comments</a></span>
+        <?php 
+            $sql = "SELECT COUNT(*) FROM comments WHERE postid = ?";
+            $commentsAmount = DB::table('comments')->where('postid', $post->id)->count();
+        ?>
+            <span class='commentCount'>{{{$commentsAmount}}}</span><span class='commentLink'><a href='{{{ url("comments/$post->id") }}}'>View Comments</a></span>
         </div>
     </div>
 @endforeach

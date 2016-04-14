@@ -57,7 +57,6 @@
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Edit</a></li>
                   <li><a href='{{{ url("delete_comment_action/$post->id/$comment->commentid") }}}'>Delete</a></li>
                 </ul>
             </div>
