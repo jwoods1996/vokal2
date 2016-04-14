@@ -150,3 +150,62 @@ textarea {
 .form-title {
    margin-bottom: 0.1em;
 }
+.commentForm {
+    width: 50%;
+    color: #CCCCCC;
+    background: #283341;
+    border: 2px solid black;
+    margin-bottom: 40px;
+    margin-top: 1em;
+    border-radius: 5px;
+}
+.commentContainer {
+    background: #283341;
+}
+.commentBox {
+    padding: 1em;
+    background: #5F666F;
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.commentIcon {
+    float: left
+}
+.commentHeader {
+    display: block;
+}
+
+.commentDescription {
+    clear: right;
+    float: left;
+    color: #CCCCCC;
+    display: block;
+}
+
+.commentTitle {
+    font-weight: bold;
+}
+
+.commentName {
+    font-style: italic;
+}
+.commentOptions {
+    float: right;
+}
+.commentFeed {
+    background: #283341;
+    border: 2px solid black;
+    padding: 1%;
+}
+.commentContent {
+    clear: left;
+    margin-top: 5%;
+    background: #CCCCCC;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+

@@ -31,7 +31,7 @@
             </div>
             <div class='postDescription'>
                 <span class='postTitle'>{{{ $post->title }}}</span></br>
-                <span class='postName'>{{{ $post->name}}}</span>
+                <span class='postName'>Posted by {{{ $post->name}}}</span>
             </div>
             <div class='dropdown postOptions'>
                 <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
@@ -52,7 +52,7 @@
             $sql = "SELECT COUNT(*) FROM comments WHERE postid = ?";
             $commentsAmount = DB::table('comments')->where('postid', $post->id)->count();
         ?>
-            <span class='commentCount'>{{{$commentsAmount}}}</span><span class='commentLink'><a href='{{{ url("comments/$post->id") }}}'>View Comments</a></span>
+            <span class='commentCount'>{{{$commentsAmount}}} comments</span><span class='commentLink'><a href='{{{ url("comments/$post->id") }}}'>View Comments</a></span>
         </div>
     </div>
 @endforeach

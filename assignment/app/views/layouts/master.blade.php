@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title></title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="{{{ secure_url('css/style.css') }}}" rel="stylesheet">
         <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     </head>
@@ -36,7 +36,6 @@
                 @section('postEditor')
                 @show
                 <div class='postFeed'>
-                    <div class='feedTitle'>Recent Posts</div>
                     <div>
                        @section('postContainer')
                        @show

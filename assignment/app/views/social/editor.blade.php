@@ -13,7 +13,8 @@
            <div class="form-title">Message:</div>
            <textarea rows="2" cols="50" name="message">{{{$post->message}}}</textarea><br>
         </div>
-        <input type="submit" class='submitButton'>
+        <button type="submit" class='btn btn-default' name="button" value='save'>Save</button>
+        <button type ="submit" class='btn btn-default' name="button" value='cancel'>Cancel</button>
     </form>
     </div>
 @endforeach

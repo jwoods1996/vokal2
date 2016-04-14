@@ -93,12 +93,18 @@ Route::get('edit_post/{postid}', function($postid)
 
 Route::post('edit_post_action/{postid}', function($postid)
 {
-    $time = date(DATE_ATOM);
-    $title = $_POST["title"];
-    $name = $_POST["name"];
-    $message = $_POST["message"];
-    edit_post($postid, $title, $name, $message, $time); 
-    return Redirect::to("/feed");
+    $button = $_POST["button"];
+    if ($button == "save") {
+        $time = date(DATE_ATOM);
+        $title = $_POST["title"];
+        $name = $_POST["name"];
+        $message = $_POST["message"];
+        edit_post($postid, $title, $name, $message, $time); 
+        return Redirect::to("/comments/$postid");   
+    } else if ($button == "cancel") {
+        return Redirect::to("/feed");
+    }
+
 });
 
 function edit_post($postid, $title, $name, $message, $time) {

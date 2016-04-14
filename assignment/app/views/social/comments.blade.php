@@ -9,7 +9,7 @@
             </div>
             <div class='postDescription'>
                 <span class='postTitle'>{{{ $post->title }}}</span></br>
-                <span class='postName'>{{{ $post->name}}}</span>
+                <span class='postName'>Posted by {{{ $post->name}}}</span>
             </div>
             <div class='dropdown postOptions'>
                 <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
@@ -21,7 +21,7 @@
                   <li><a href='{{{ url("delete_post_action/$post->id") }}}'>Delete</a></li>
                 </ul>
             </div>
-        </di
+        </div>
         <div class='postContent'>
             {{{ $post->message }}}
         </div>
@@ -33,6 +33,7 @@
 <div class='commentForm'>
     <form method="post" action = '{{{ url("add_comment_action/$post->id") }}}' >
         <div class='form-fields'>
+        <span class='formTitle'>Post a comment</span>
            <div class="form-title">Name:</div>
            <input type="text" name="name" class='form-field'/><br>
            <div class="form-title">Message:</div>
@@ -49,7 +50,7 @@
     <div class='commentBox'>
         <div class='commentHeader'>
             <div class='commentDescription'>
-                <span class='commentName'>{{{ $comment->name}}}</span>
+                <span class='commentName'>Posted by {{{ $comment->name}}}</span>
             </div>
             <div class='dropdown postOptions'>
                 <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
@@ -60,7 +61,7 @@
                   <li><a href='{{{ url("delete_comment_action/$post->id/$comment->commentid") }}}'>Delete</a></li>
                 </ul>
             </div>
-        </di
+        </div>
         <div class='commentContent'>
             {{{ $comment->message }}}
         </div>
