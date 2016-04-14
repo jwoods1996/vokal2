@@ -15,9 +15,6 @@
         <input type="submit" class='submitButton'>
     </form>
     </div>
-
-    
-
 @stop
 
 
@@ -42,7 +39,7 @@
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Edit</a></li>
+                  <li><a href='{{{ url("edit_post/$post->id") }}}'>Edit</a></li>
                   <li><a href='{{{ url("delete_post_action/$post->id") }}}'>Delete</a></li>
                 </ul>
             </div>

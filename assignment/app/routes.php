@@ -82,11 +82,29 @@ Route::get('delete_comment_action/{postid}/{commentid}', function($postid, $comm
 Route::get('delete_post_action/{postid}', function($postid)
 {   
     delete_post($postid);
-
     return Redirect::to("/feed");
-
 });
 
+Route::get('edit_post/{postid}', function($postid)
+{
+    $posts = displaySinglePost($postid);
+    return View::make('social.editor')->withPosts($posts);
+});
+
+Route::post('edit_post_action/{postid}', function($postid)
+{
+    $time = date(DATE_ATOM);
+    $title = $_POST["title"];
+    $name = $_POST["name"];
+    $message = $_POST["message"];
+    edit_post($postid, $title, $name, $message, $time); 
+    return Redirect::to("/feed");
+});
+
+function edit_post($postid, $title, $name, $message, $time) {
+    $sql = "UPDATE posts SET time=?,title=?,name=?,message=? WHERE id=?";
+    DB::update($sql, array($time, $title, $name, $message, $postid));
+}
 function displayPosts() {
     $sql = "select * from posts order by time DESC";
     $posts = DB::select($sql);

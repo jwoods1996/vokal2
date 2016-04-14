@@ -33,6 +33,8 @@
             <div class='col-sm-8'>
                 @section('postForm')
                 @show
+                @section('postEditor')
+                @show
                 <div class='postFeed'>
                     <div class='feedTitle'>Recent Posts</div>
                     <div>
