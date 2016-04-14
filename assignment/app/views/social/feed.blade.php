@@ -13,7 +13,7 @@
            <div class="field-title">Message:</div>
            <textarea rows="2" cols="50" name="message" required></textarea><br>
         </div>
-        <input type="submit" class='submitButton'>
+        <div class='buttonBar'><input type="submit" class='formButton'></div>
     </form>
     </div>
 @stop
@@ -24,7 +24,6 @@
 <!-- Code for the collection of posts in the feed -->
 @section('postContainer')
 
-                <div class='postFeed'>
 @foreach($posts as $post)
 
     <div class='postBox'>
@@ -59,5 +58,6 @@
         </div>
     </div>
 @endforeach
-</div>
+<div class='bottomMessage'>No more posts to show</div>
+<div class='footer'></div>
 @stop

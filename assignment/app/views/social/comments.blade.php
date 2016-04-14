@@ -2,7 +2,7 @@
 
 @section('post')
 
-                <div class='postFeed'>
+<div class='postFeed'>
 @foreach($posts as $post)
     <div class='postBox'>
         <div class='postHeader'>
@@ -42,7 +42,7 @@
            <div class="field-title">Message:</div>
            <textarea rows="2" cols="50" name="message" required></textarea><br>
         </div>
-        <input type="submit" class='submitButton'>
+        <div class='buttonBar'><input type="submit" class='formButton'></div>
     </form>
 </div>
 @stop
@@ -50,7 +50,6 @@
 
 @section('comments')
 
-                <div class='postFeed'>
 @foreach($comments as $comment)
     <div class='commentBox'>
         <div class='commentHeader'>
@@ -72,7 +71,8 @@
         </div>
     </div>
 @endforeach
-</div>
+<div class='bottomMessage'>No more comments</div>
+<div class='footer'></div>
 @stop
 
 @section('commentForm')

@@ -18,24 +18,28 @@
                         <div class='userIcon'>
                             <img src='https://s3.amazonaws.com/whisperinvest-images/default.png' width='50'>
                         </div>              
-                        <div id='userName'>
+                        <div class='userName'>
                             Logged in as </br>
                             FirstName Lastname <!-- Placehold -->
                         </div><!-- User Info -->                        
                     </div>
+                    <div class='nav-bar'>
+                    <ul>
+                        
+                         <li><a href="{{{ url('feed') }}}" class="navbtn">Home</a></li>
+                         <li><a href="{{{ url('documentation') }}}" class="navbtn">Documentation</a></li>
+                         <li><a href="{{{ url('friends') }}}" class="navbtn">Friends</a></li>
+                          <li><a href="{{{ url('messages') }}}" class="navbtn">Messages</a></li>
+                        <li><a href="{{{ url('notifications') }}}" class="navbtn">Notifications</a></li>                    
+                    </ul>                        
+                    </div>
 
-                    <ul class='nav-bar'>
-                         <li><a href="{{{ url('feed') }}}" class="btn btn-default">Home</a></li>
-                         <li><a href="{{{ url('documentation') }}}" class="btn btn-default">Documentation</a></li>
-                         <li><a href="{{{ url('friends') }}}" class="btn btn-default">Friends</a></li>
-                          <li><a href="{{{ url('messages') }}}" class="btn btn-default">Messages</a></li>
-                        <li><a href="{{{ url('notifications') }}}" class="btn btn-default">Notifications</a></li>                    
-                    </ul>
 
                 </div><!-- Sidebar -->
             </div>
             <div class='col-sm-1'></div>
             <div class='col-sm-8'>
+                
                 @section('postForm')
                 @show
                 @section('postEditor')
