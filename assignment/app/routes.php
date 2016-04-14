@@ -26,6 +26,11 @@ Route::get('/feed', function()
   return View::make('social.feed')->with('posts', $posts);
 });
 
+Route::get('/documentation', function()
+{
+    return View::make('social.documentation');
+});
+
 Route::get('/comments/{postid}', function($postid)
 {
     $posts = displaySinglePost($postid);

@@ -14,19 +14,24 @@
             <div class='col-sm-3'>
                 <div class='sidebar'>
                     <a class="logo" href=".">Vokal</a></br>
-                    
-                    <div id='userinfo'>
-                        <img src='https://s3.amazonaws.com/whisperinvest-images/default.png' width='50'>
-                        Logged in as </br>
-                        FirstName Lastname <!-- Placehold -->
-                    </div><!-- User Info -->
-                    <div class="btn-group-vertical" role="group">
-                          <button type="button" class="btn btn-default"><a href='friends'>Friends</a></button>
-                          <button type="button" class="btn btn-default"><a href='messages'>Messages</a></button>
-                          <button type="button" class="btn btn-default"><a href='notifications'>Notifications</a></button>
-                          <button type="button" class="btn btn-default"><a href='settings'>Settings</a></button>
-                          <button type="button" class="btn btn-default">Logout</button>
+                    <div class='userInfo'>
+                        <div class='userIcon'>
+                            <img src='https://s3.amazonaws.com/whisperinvest-images/default.png' width='50'>
+                        </div>              
+                        <div id='userName'>
+                            Logged in as </br>
+                            FirstName Lastname <!-- Placehold -->
+                        </div><!-- User Info -->                        
                     </div>
+
+                    <ul class='nav-bar'>
+                         <li><a href="{{{ url('feed') }}}" class="btn btn-default">Home</a></li>
+                         <li><a href="{{{ url('documentation') }}}" class="btn btn-default">Documentation</a></li>
+                         <li><a href="{{{ url('friends') }}}" class="btn btn-default">Friends</a></li>
+                          <li><a href="{{{ url('messages') }}}" class="btn btn-default">Messages</a></li>
+                        <li><a href="{{{ url('notifications') }}}" class="btn btn-default">Notifications</a></li>                    
+                    </ul>
+
                 </div><!-- Sidebar -->
             </div>
             <div class='col-sm-1'></div>
@@ -35,25 +40,15 @@
                 @show
                 @section('postEditor')
                 @show
-                <div class='postFeed'>
-                    <div>
                        @section('postContainer')
                        @show
-                    </div>
-                    <div>
                         @section('post')
                         @show
-                    </div>
-                    <div>
                         @section('commentForm')
                         @show
-                    </div>
-                    <div>
                         @section('comments')
                         @show
-                    </div>
 
-                </div>
             </div>
         </div><!-- /.container -->
     </body>

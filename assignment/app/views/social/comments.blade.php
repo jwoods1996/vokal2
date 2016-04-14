@@ -1,6 +1,8 @@
 @extends('layouts.master')
 
 @section('post')
+
+                <div class='postFeed'>
 @foreach($posts as $post)
     <div class='postBox'>
         <div class='postHeader'>
@@ -27,17 +29,18 @@
         </div>
     </div>
 @endforeach
+</div>
 @stop
 
 @section('commentForm')
 <div class='commentForm'>
     <form method="post" action = '{{{ url("add_comment_action/$post->id") }}}' >
-        <div class='form-fields'>
         <span class='formTitle'>Post a comment</span>
-           <div class="form-title">Name:</div>
-           <input type="text" name="name" class='form-field'/><br>
-           <div class="form-title">Message:</div>
-           <textarea rows="2" cols="50" name="message"></textarea><br>
+        <div class='form-fields'>
+           <div class="field-title">Name:</div>
+           <input type="text" name="name" class='form-field' required/><br>
+           <div class="field-title">Message:</div>
+           <textarea rows="2" cols="50" name="message" required></textarea><br>
         </div>
         <input type="submit" class='submitButton'>
     </form>
@@ -46,6 +49,8 @@
 
 
 @section('comments')
+
+                <div class='postFeed'>
 @foreach($comments as $comment)
     <div class='commentBox'>
         <div class='commentHeader'>
@@ -67,7 +72,7 @@
         </div>
     </div>
 @endforeach
-
+</div>
 @stop
 
 @section('commentForm')

@@ -4,13 +4,14 @@
 @section('postForm')
     <div class='postForm'>
     <form method="post" action = '{{{ url('add_post_action') }}}' >
+        <span class='formTitle'>Create a post..</span>
         <div class='form-fields'>
-           <div class="form-title">Title:</div>
-           <input type="text" name="title" class='form-field'/><br>
-           <div class="form-title">Name:</div>
-           <input type="text" name="name" class='form-field'/><br>
-           <div class="form-title">Message:</div>
-           <textarea rows="2" cols="50" name="message"></textarea><br>
+           <div class="field-title">Title:</div>
+           <input type="text" name="title" class='form-field' required/><br>
+           <div class="field-title">Name:</div>
+           <input type="text" name="name" class='form-field' required/><br>
+           <div class="field-title">Message:</div>
+           <textarea rows="2" cols="50" name="message" required></textarea><br>
         </div>
         <input type="submit" class='submitButton'>
     </form>
@@ -22,12 +23,14 @@
 
 <!-- Code for the collection of posts in the feed -->
 @section('postContainer')
+
+                <div class='postFeed'>
 @foreach($posts as $post)
 
     <div class='postBox'>
         <div class='postHeader'>
             <div class='postIcon'>
-                <img src='{{{ $post->image }}}' width='50px'></img>
+                <img src='{{{ $post->image }}}' width='50px'>
             </div>
             <div class='postDescription'>
                 <span class='postTitle'>{{{ $post->title }}}</span></br>
@@ -56,4 +59,5 @@
         </div>
     </div>
 @endforeach
+</div>
 @stop
