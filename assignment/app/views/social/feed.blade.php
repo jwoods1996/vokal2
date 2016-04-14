@@ -27,33 +27,32 @@
 @section('postContainer')
 @foreach($posts as $post)
 
-                <div class='postBox'>
-                    <div class='postHeader'>
-                        <div class='postIcon'>
-                            <img src='{{{ $post->image }}}' width='50px'></img>
-                        </div>
-                        <div class='postDescription'>
-                            <span class='postTitle'>{{{ $post->title }}}</span></br>
-                            <span class='postName'>{{{ $post->name}}}</span>
-                        </div>
-                        <div class='dropdown postOptions'>
-                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                              
-                              <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a href="#">Edit</a></li>
-                              <li><a href=''>Delete</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class='postContent'>
-                        {{{ $post->message }}}
-                    </div>
-                    <div class='postComments'>
-                        <span class='commentCount'>XY Comments</span><span class='commentLink'><a href=''>View Comments</a></span>
-                    </div>
-                </div>
+    <div class='postBox'>
+        <div class='postHeader'>
+            <div class='postIcon'>
+                <img src='{{{ $post->image }}}' width='50px'></img>
+            </div>
+            <div class='postDescription'>
+                <span class='postTitle'>{{{ $post->title }}}</span></br>
+                <span class='postName'>{{{ $post->name}}}</span>
+            </div>
+            <div class='dropdown postOptions'>
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                  
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Edit</a></li>
+                  <li><a href='{{{ url("delete_post_action/$post->id") }}}'>Delete</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class='postContent'>
+            {{{ $post->message }}}
+        </div>
+        <div class='postComments'>
+            <span class='commentCount'>XY Comments</span><span class='commentLink'><a href='{{{ url("comments/$post->id") }}}'>View Comments</a></span>
+        </div>
+    </div>
 @endforeach
 @stop

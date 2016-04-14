@@ -34,42 +34,24 @@
                 @section('postForm')
                 @show
                 <div class='postFeed'>
-                <div class='feedTitle'>Recent Posts</div>
-                <div>
-                @section('postContainer')
-                @show
-                </div>
-                <div class='postBox'>
-                    <div class='postHeader'>
-                        <div class='postIcon'>
-                            <img src="http://rockstartemplate.com/blogheaders/bannerdesign1.jpg" width='50px'></img>
-                        </div>
-                        <div class='postDescription'>
-                            <span class='postTitle'>Example Title</span></br>
-                            <span class='postName'>Example Name</span>
-                        </div>
-                        <div class='dropdown postOptions'>
-                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                              
-                              <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a href="#">Edit</a></li>
-                              <li><a href=''>Delete</a></li>
-                            </ul>
-                        </div>
+                    <div class='feedTitle'>Recent Posts</div>
+                    <div>
+                       @section('postContainer')
+                       @show
+                    </div>
+                    <div>
+                        @section('post')
+                        @show
+                    </div>
+                    <div>
+                        @section('commentForm')
+                        @show
+                    </div>
+                    <div>
+                        @section('comments')
+                        @show
                     </div>
 
-                    <div class='postContent'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non neque et mauris tempor venenatis a in ante. 
-                        Nullam viverra arcu ipsum, id fringilla augue venenatis hendrerit. Curabitur quis cursus sem. 
-                        Mauris nec nunc ac magna luctus pharetra eu nec libero. Fusce dictum non felis vitae porttitor. 
-                        Nunc ullamcorper, dui in scelerisque maximus, est mauris gravida massa, in blandit dolor.
-                    </div>
-                    <div class='postComments'>
-                        <span class='commentCount'>XY Comments</span><span class='commentLink'><a href=''>View Comments</a></span>
-                    </div>
-                </div>
                 </div>
             </div>
         </div><!-- /.container -->

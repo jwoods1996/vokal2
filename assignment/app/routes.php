@@ -25,12 +25,36 @@ Route::get('/feed', function()
   return View::make('social.feed')->with('posts', $posts);
 });
 
+
+Route::get('comments/{postid}', function($postid)
+{
+    $posts = displaySinglePost($postid);
+    $comments = displayComments($postid);
+
+    return View::make('social.comments')->withPosts($posts)->withComments($comments);
+});
+Route::get('add_comment_action/{postid}', function($postid)
+{
+    $name = $_POST["name"];
+    $message = $_POST["message"];
+    $id = add_comment($postid, $name, $message);
+    return Redirect::to("/comments/$postid");
+});
 function displayPosts() {
     $sql = "select * from posts order by time DESC";
     $posts = DB::select($sql);
     return $posts;
 }
-
+function displaySinglePost($postid) {
+    $sql = "select * from posts where id = ?";
+    $posts = DB::select($sql, array($postid));
+    return $posts;
+}
+function displayComments() {
+    $sql = "select * from comments where postid = ?";
+    $comments = DB::select($sql);
+    return $comments;
+}
 Route::get('/editor', function()
 {
     return View::make('social.editor');
@@ -86,5 +110,10 @@ function add_post($title, $name, $message, $time)
     $id = DB::getPdo()->lastInsertId();
     return $id;
 } 
-
-
+function add_comment($postid, $name, $message)
+{
+    $sql = "insert into comments (postid, name, message) values (?, ?, ?)";
+    DB::insert($sql, array($postid, $name, $message));
+    $id = DB::getPdo()->lastInsertId();
+    return $id;
+}

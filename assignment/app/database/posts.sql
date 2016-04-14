@@ -1,15 +1,23 @@
 drop table if exists posts;
 
 CREATE TABLE posts (
-  id integer not null primary key autoincrement,
+  id INTEGER NOT NULL PRIMARY KEY autoincrement,
   image,
-  title varchar(40),
-  name varchar(40),
-  message varchar(40),
-  time varchar(40)
+  title TEXT NOT NULL,
+  name TEXT NOT NULL,
+  message TEXT NOT NULL,
+  time
+);
+
+drop table if exists comments;
+
+CREATE TABLE comments (
+  postid INTEGER NOT NULL REFERENCES posts(id),
+  commentid INTEGER NOT NULL PRIMARY KEY autoincrement,
+  name TEXT NOT NULL,
+  message TEXT NOT NULL
 );
 
 
-
-select * from posts
-order by time DESC;
+SELECT * FROM posts
+ORDER BY time DESC;

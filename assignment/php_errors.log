@@ -601,3 +601,297 @@
 [12-Apr-2016 07:44:39 UTC] PHP  13. {closure:/home/ubuntu/workspace/2503ict/assignment/app/routes.php:51-57}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5398
 [12-Apr-2016 07:44:39 UTC] PHP  14. Illuminate\Support\Facades\Input::post() /home/ubuntu/workspace/2503ict/assignment/app/routes.php:53
 [12-Apr-2016 07:44:39 UTC] PHP  15. Illuminate\Support\Facades\Facade::__callStatic() /home/ubuntu/workspace/2503ict/assignment/app/routes.php:53
+[13-Apr-2016 09:07:12 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/a041e270a4e741c1f64b8f84851eeb98 on line 44
+[13-Apr-2016 09:07:12 UTC] PHP Stack trace:
+[13-Apr-2016 09:07:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 09:07:12 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 09:07:12 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 09:07:12 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 09:07:12 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 09:07:12 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 09:07:12 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 09:07:12 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[13-Apr-2016 09:07:12 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[13-Apr-2016 09:07:12 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[13-Apr-2016 09:07:12 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[13-Apr-2016 09:07:12 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[13-Apr-2016 09:07:12 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[13-Apr-2016 09:07:12 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[13-Apr-2016 09:07:12 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[13-Apr-2016 09:07:12 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[13-Apr-2016 09:07:12 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[13-Apr-2016 09:07:12 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[13-Apr-2016 09:07:32 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/a041e270a4e741c1f64b8f84851eeb98 on line 44
+[13-Apr-2016 09:07:32 UTC] PHP Stack trace:
+[13-Apr-2016 09:07:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 09:07:32 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 09:07:32 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 09:07:32 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 09:07:32 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 09:07:32 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 09:07:32 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 09:07:32 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[13-Apr-2016 09:07:32 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[13-Apr-2016 09:07:32 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[13-Apr-2016 09:07:32 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[13-Apr-2016 09:07:32 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[13-Apr-2016 09:07:32 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[13-Apr-2016 09:07:32 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[13-Apr-2016 09:07:32 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[13-Apr-2016 09:07:32 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[13-Apr-2016 09:07:32 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[13-Apr-2016 09:07:32 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[13-Apr-2016 09:07:54 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/a041e270a4e741c1f64b8f84851eeb98 on line 44
+[13-Apr-2016 09:07:54 UTC] PHP Stack trace:
+[13-Apr-2016 09:07:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 09:07:54 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 09:07:54 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 09:07:54 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 09:07:54 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 09:07:54 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 09:07:54 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 09:07:54 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[13-Apr-2016 09:07:54 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[13-Apr-2016 09:07:54 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[13-Apr-2016 09:07:54 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[13-Apr-2016 09:07:54 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[13-Apr-2016 09:07:54 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[13-Apr-2016 09:07:54 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[13-Apr-2016 09:07:54 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[13-Apr-2016 09:07:54 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[13-Apr-2016 09:07:54 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[13-Apr-2016 09:07:54 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[13-Apr-2016 09:10:26 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/a041e270a4e741c1f64b8f84851eeb98 on line 44
+[13-Apr-2016 09:10:26 UTC] PHP Stack trace:
+[13-Apr-2016 09:10:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 09:10:26 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 09:10:26 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 09:10:26 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 09:10:26 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 09:10:26 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 09:10:26 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 09:10:26 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[13-Apr-2016 09:10:26 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[13-Apr-2016 09:10:26 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[13-Apr-2016 09:10:26 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[13-Apr-2016 09:10:26 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[13-Apr-2016 09:10:26 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[13-Apr-2016 09:10:26 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[13-Apr-2016 09:10:26 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[13-Apr-2016 09:10:26 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[13-Apr-2016 09:10:26 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[13-Apr-2016 09:10:26 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[13-Apr-2016 09:11:15 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/a041e270a4e741c1f64b8f84851eeb98 on line 44
+[13-Apr-2016 09:11:15 UTC] PHP Stack trace:
+[13-Apr-2016 09:11:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 09:11:15 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 09:11:15 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 09:11:15 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 09:11:15 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 09:11:15 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 09:11:15 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 09:11:15 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[13-Apr-2016 09:11:15 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[13-Apr-2016 09:11:15 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[13-Apr-2016 09:11:15 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[13-Apr-2016 09:11:15 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[13-Apr-2016 09:11:15 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[13-Apr-2016 09:11:15 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[13-Apr-2016 09:11:15 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[13-Apr-2016 09:11:15 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[13-Apr-2016 09:11:15 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[13-Apr-2016 09:11:15 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[13-Apr-2016 09:11:35 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/a041e270a4e741c1f64b8f84851eeb98 on line 44
+[13-Apr-2016 09:11:35 UTC] PHP Stack trace:
+[13-Apr-2016 09:11:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 09:11:35 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 09:11:35 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 09:11:35 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 09:11:35 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 09:11:35 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 09:11:35 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 09:11:35 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[13-Apr-2016 09:11:35 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[13-Apr-2016 09:11:35 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[13-Apr-2016 09:11:35 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[13-Apr-2016 09:11:35 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[13-Apr-2016 09:11:35 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[13-Apr-2016 09:11:35 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[13-Apr-2016 09:11:35 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[13-Apr-2016 09:11:35 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[13-Apr-2016 09:11:35 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[13-Apr-2016 09:11:35 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[13-Apr-2016 09:11:46 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/a041e270a4e741c1f64b8f84851eeb98 on line 44
+[13-Apr-2016 09:11:46 UTC] PHP Stack trace:
+[13-Apr-2016 09:11:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 09:11:46 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 09:11:46 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 09:11:46 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 09:11:46 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 09:11:46 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 09:11:46 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 09:11:46 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[13-Apr-2016 09:11:46 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[13-Apr-2016 09:11:46 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[13-Apr-2016 09:11:46 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[13-Apr-2016 09:11:46 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[13-Apr-2016 09:11:46 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[13-Apr-2016 09:11:46 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[13-Apr-2016 09:11:46 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[13-Apr-2016 09:11:46 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[13-Apr-2016 09:11:46 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[13-Apr-2016 09:11:46 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[13-Apr-2016 09:11:53 UTC] PHP Parse error:  syntax error, unexpected '$post' (T_VARIABLE) in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/a041e270a4e741c1f64b8f84851eeb98 on line 44
+[13-Apr-2016 09:11:53 UTC] PHP Stack trace:
+[13-Apr-2016 09:11:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 09:11:53 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 09:11:53 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 09:11:53 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 09:11:53 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 09:11:53 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 09:11:53 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 09:11:53 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[13-Apr-2016 09:11:53 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[13-Apr-2016 09:11:53 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[13-Apr-2016 09:11:53 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[13-Apr-2016 09:11:53 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[13-Apr-2016 09:11:53 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[13-Apr-2016 09:11:53 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[13-Apr-2016 09:11:53 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[13-Apr-2016 09:11:53 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[13-Apr-2016 09:11:53 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[13-Apr-2016 09:11:53 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[13-Apr-2016 11:14:50 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/763e5a25f14b0322ce046c411176fddb on line 31
+[13-Apr-2016 11:14:50 UTC] PHP Stack trace:
+[13-Apr-2016 11:14:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 11:14:50 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 11:14:50 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 11:14:50 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 11:14:50 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 11:14:50 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 11:14:50 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 11:14:50 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[13-Apr-2016 11:14:50 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[13-Apr-2016 11:14:50 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[13-Apr-2016 11:14:50 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[13-Apr-2016 11:14:50 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[13-Apr-2016 11:14:50 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[13-Apr-2016 11:14:50 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[13-Apr-2016 11:14:50 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[13-Apr-2016 11:14:50 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[13-Apr-2016 11:14:50 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[13-Apr-2016 11:14:50 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[13-Apr-2016 11:15:34 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/763e5a25f14b0322ce046c411176fddb on line 31
+[13-Apr-2016 11:15:34 UTC] PHP Stack trace:
+[13-Apr-2016 11:15:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 11:15:34 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 11:15:34 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 11:15:34 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 11:15:34 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 11:15:34 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 11:15:34 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 11:15:34 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[13-Apr-2016 11:15:34 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[13-Apr-2016 11:15:34 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[13-Apr-2016 11:15:34 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[13-Apr-2016 11:15:34 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[13-Apr-2016 11:15:34 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[13-Apr-2016 11:15:34 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[13-Apr-2016 11:15:34 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[13-Apr-2016 11:15:34 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[13-Apr-2016 11:15:34 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[13-Apr-2016 11:15:34 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[13-Apr-2016 14:34:42 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF) in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/a041e270a4e741c1f64b8f84851eeb98 on line 51
+[13-Apr-2016 14:34:42 UTC] PHP Stack trace:
+[13-Apr-2016 14:34:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 14:34:42 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 14:34:42 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 14:34:42 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 14:34:42 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 14:34:42 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 14:34:42 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 14:34:42 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[13-Apr-2016 14:34:42 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[13-Apr-2016 14:34:42 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[13-Apr-2016 14:34:42 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[13-Apr-2016 14:34:42 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[13-Apr-2016 14:34:42 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[13-Apr-2016 14:34:42 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[13-Apr-2016 14:34:42 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[13-Apr-2016 14:34:42 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[13-Apr-2016 14:34:42 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[13-Apr-2016 14:34:42 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[13-Apr-2016 14:35:11 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF) in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/a041e270a4e741c1f64b8f84851eeb98 on line 51
+[13-Apr-2016 14:35:11 UTC] PHP Stack trace:
+[13-Apr-2016 14:35:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 14:35:11 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 14:35:11 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 14:35:11 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 14:35:11 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 14:35:11 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 14:35:11 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 14:35:11 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[13-Apr-2016 14:35:11 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[13-Apr-2016 14:35:11 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[13-Apr-2016 14:35:11 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[13-Apr-2016 14:35:11 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[13-Apr-2016 14:35:11 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[13-Apr-2016 14:35:11 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[13-Apr-2016 14:35:11 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[13-Apr-2016 14:35:11 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[13-Apr-2016 14:35:11 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[13-Apr-2016 14:35:11 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[13-Apr-2016 14:36:36 UTC] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/a041e270a4e741c1f64b8f84851eeb98 on line 51
+[13-Apr-2016 14:36:36 UTC] PHP Stack trace:
+[13-Apr-2016 14:36:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 14:36:36 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 14:36:36 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 14:36:36 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 14:36:36 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 14:36:36 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 14:36:36 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 14:36:36 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[13-Apr-2016 14:36:36 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[13-Apr-2016 14:36:36 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[13-Apr-2016 14:36:36 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[13-Apr-2016 14:36:36 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[13-Apr-2016 14:36:36 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[13-Apr-2016 14:36:36 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[13-Apr-2016 14:36:36 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[13-Apr-2016 14:36:36 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[13-Apr-2016 14:36:36 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[13-Apr-2016 14:36:36 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[13-Apr-2016 14:43:39 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/2503ict/assignment/app/storage/views/763e5a25f14b0322ce046c411176fddb on line 3
+[13-Apr-2016 14:43:39 UTC] PHP Stack trace:
+[13-Apr-2016 14:43:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 14:43:39 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 14:43:39 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 14:43:39 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 14:43:39 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 14:43:39 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 14:43:39 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 14:43:39 UTC] PHP   8. Illuminate\Foundation\Application->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:696
+[13-Apr-2016 14:43:39 UTC] PHP   9. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:715
+[13-Apr-2016 14:43:39 UTC] PHP  10. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5053
+[13-Apr-2016 14:43:39 UTC] PHP  11. Illuminate\Routing\Router->prepareResponse() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5067
+[13-Apr-2016 14:43:39 UTC] PHP  12. Symfony\Component\HttpFoundation\Response->__construct() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:5258
+[13-Apr-2016 14:43:39 UTC] PHP  13. Illuminate\Http\Response->setContent() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10042
+[13-Apr-2016 14:43:39 UTC] PHP  14. Illuminate\View\View->render() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:10512
+[13-Apr-2016 14:43:39 UTC] PHP  15. Illuminate\View\View->renderContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9806
+[13-Apr-2016 14:43:39 UTC] PHP  16. Illuminate\View\View->getContents() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9819
+[13-Apr-2016 14:43:39 UTC] PHP  17. Illuminate\View\Engines\CompilerEngine->get() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:9832
+[13-Apr-2016 14:43:39 UTC] PHP  18. Illuminate\View\Engines\PhpEngine->evaluatePath() /home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php:56
+[13-Apr-2016 16:02:05 UTC] PHP Parse error:  syntax error, unexpected '[', expecting '(' in /home/ubuntu/workspace/2503ict/assignment/app/routes.php on line 43
+[13-Apr-2016 16:02:05 UTC] PHP Stack trace:
+[13-Apr-2016 16:02:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/2503ict/assignment/public/index.php:0
+[13-Apr-2016 16:02:05 UTC] PHP   2. Illuminate\Foundation\Application->run() /home/ubuntu/workspace/2503ict/assignment/public/index.php:49
+[13-Apr-2016 16:02:05 UTC] PHP   3. Stack\StackedHttpKernel->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:657
+[13-Apr-2016 16:02:05 UTC] PHP   4. Illuminate\Cookie\Guard->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:11119
+[13-Apr-2016 16:02:05 UTC] PHP   5. Illuminate\Cookie\Queue->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8379
+[13-Apr-2016 16:02:05 UTC] PHP   6. Illuminate\Session\Middleware->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:8432
+[13-Apr-2016 16:02:05 UTC] PHP   7. Illuminate\Foundation\Application->handle() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:7825
+[13-Apr-2016 16:02:05 UTC] PHP   8. Illuminate\Foundation\Application->boot() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:695
+[13-Apr-2016 16:02:05 UTC] PHP   9. Illuminate\Foundation\Application->bootApplication() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:635
+[13-Apr-2016 16:02:05 UTC] PHP  10. Illuminate\Foundation\Application->fireAppCallbacks() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:641
+[13-Apr-2016 16:02:05 UTC] PHP  11. call_user_func:{/home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:736}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:736
+[13-Apr-2016 16:02:05 UTC] PHP  12. {closure:/home/ubuntu/workspace/2503ict/assignment/vendor/laravel/framework/src/Illuminate/Foundation/start.php:223-271}() /home/ubuntu/workspace/2503ict/assignment/bootstrap/compiled.php:736
