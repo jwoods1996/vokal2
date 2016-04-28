@@ -46,11 +46,8 @@
             </div>
             <div class='postComments'>
                 <!--Get the total amount of comments for the relevant post-->
-                <?php 
-                    $sql = "SELECT COUNT(*) FROM comments WHERE postid = ?";
-                    $commentsAmount = DB::table('comments')->where('postid', $post->id)->count();
-                ?>
-                <span class='commentCount'>{{{$commentsAmount}}} comments</span><span class='commentLink'><a href='{{{ url("comments/$post->id") }}}'>View Comments</a></span>
+
+                <span class='commentCount'>{{{$post->commentsAmount}}} comments</span><span class='commentLink'><a href='{{{ url("comments/$post->id") }}}'>View Comments</a></span>
             </div>
         </div>
     @endforeach

@@ -71,13 +71,11 @@ Route::get('/notifications', function()
 Route::post('add_post_action', function()
 {
     $time = date(DATE_ATOM);
-    $title = $_POST["title"];
-    $title = clean($title);
-    $name = $_POST["name"];
-    $name = clean($name);
-    $message = $_POST["message"];
-    $message = clean($message);
-    $id = add_post($title, $name, $message, $time);
+    $title = clean($_POST["title"]);
+    $name = clean($_POST["name"]);
+    $message = clean($_POST["message"]);
+    $commentsAmount = 0;
+    $id = add_post($title, $name, $message, $time, $commentsAmount);
     //Redirect to the homepage
     return Redirect::to("/feed");
 
@@ -129,12 +127,14 @@ Route::get('delete_post_action/{postid}', function($postid)
 Route::post('add_comment_action/{postid}', function($postid)
 {
     //Retrieve the data from the input fields
-    $name = $_POST["name"];
+    $name = Input::get('name');
     $name = clean($name);
-    $message = $_POST["message"];
+    $message = Input::get('message');
     $message = clean($message);
     //Call a function to submit the comment to the database
     $id = add_comment($postid, $name, $message);
+    //Update the number of comments
+    $commentsAmount = update_comment_amount($postid);
     //Redirect to the same comments page
     return Redirect::to("/comments/$postid");
 });
@@ -145,17 +145,24 @@ Route::get('delete_comment_action/{postid}/{commentid}', function($postid, $comm
 {   
     //Call a function to delete the comment from the database
     delete_comment($commentid);
+    //Update the number of comments
+    $commentsAmount = update_comment_amount($postid);
     //Redirect to the same comments page
     return Redirect::to("/comments/$postid");
 });
 
+//Update the comments amount variable for the relevant post
+function update_comment_amount($postid) {
+    $commentsAmount = DB::table('comments')->where('postid', $postid)->count();
+    $sql = "UPDATE posts SET commentsAmount=? WHERE id=?";
+    DB::update($sql, array($commentsAmount, $postid));
+}
 //Retrieve ALL the posts from the database, and sort them by most recent to
 //least recent
 function displayPosts() {
     $sql = "select * from posts order by time DESC";
     $posts = DB::select($sql);
     return $posts;
-    
 }
 
 //Display only the revelant post, found with postid
@@ -166,10 +173,10 @@ function displaySinglePost($postid) {
 }
 
 //Add a post to the database
-function add_post($title, $name, $message, $time)
+function add_post($title, $name, $message, $time, $commentsAmount)
 {
-    $sql = "insert into posts (image, title, name, message, time) values (?, ?, ?, ?, ?)";
-    DB::insert($sql, array('https://s3.amazonaws.com/whisperinvest-images/default.png', $title, $name, $message, $time));
+    $sql = "insert into posts (image, title, name, message, time, commentsAmount) values (?, ?, ?, ?, ?, ?)";
+    DB::insert($sql, array('https://s3.amazonaws.com/whisperinvest-images/default.png', $title, $name, $message, $time, $commentsAmount));
 } 
 
 //Update a post in the database
@@ -207,6 +214,5 @@ function delete_comment($commentid)
 
 function clean($input)
 {
-    $input = EscapeShellCmd($input);
-    return $input;    
+    return $input;
 }

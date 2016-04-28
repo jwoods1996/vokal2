@@ -149,6 +149,16 @@ textarea {
     margin: 0px;
 }
 
+.documentationBox {
+    color: #CCCCCC;
+    padding: 1em;
+    background: #505a64; /* Old browsers */
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
 .feedTitle {
     color: #CCCCCC;
     font-weight: bold;
@@ -220,6 +230,16 @@ textarea {
     font-weight: bold;
 }
 
+.logo:hover, .logo:focus {
+    text-decoration: none;
+    color: #CCCCCC;
+    font-family: 'Times New Roman';
+    margin-left: 10px;
+    font-size: 32pt;
+    font-style: italic;
+    font-weight: bold;
+}
+
 .nav-bar {
     height: 100%;
     margin-top: 40px;
@@ -235,7 +255,6 @@ textarea {
     color: #CCCCCC;
     background-color: RGBA(80,90,100,200);
 }
-
 .navbtn.focus,
 .navbtn:focus {
     color: #333333;

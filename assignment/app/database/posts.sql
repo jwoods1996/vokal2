@@ -6,7 +6,8 @@ CREATE TABLE posts (
   title TEXT NOT NULL,
   name TEXT NOT NULL,
   message TEXT NOT NULL,
-  time DATE NOT NULL
+  time DATE NOT NULL,
+  commentsAmount INTEGER
 );
 
 drop table if exists comments;
