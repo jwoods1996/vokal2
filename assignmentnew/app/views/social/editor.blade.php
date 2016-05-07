@@ -9,12 +9,13 @@
         <div class='form-fields'>
            <div class="form-title">{{ Form::label('name', 'Name: ') }}</div>
            <span class='form-field'>{{ Form::text('name') }}</span><br>
-            {{ $errors->first('name') }}
+            <span style="color:yellow;font-style:italic;">{{ $errors->first('name') }}</span>
            <div class="form-title">{{ Form::label('title', 'Title: ') }}</div>
            <span class='form-field'>{{ Form::text('title') }}</span><br>
+            <span style="color:yellow;font-style:italic;">{{ $errors->first('title') }}</span>
            <div class="form-title">{{ Form::label('message', 'Message: ') }}</div>
-           <span class="form-field">{{ Form::text('message') }}</span>
-           {{ $errors->first('message') }}
+           <span class="form-field">{{ Form::text('message') }}</span><br>
+           <span style="color:yellow;font-style:italic;">{{ $errors->first('message') }}</span>
         </div>
         <div class='buttonBar'>
             {{ Form::submit('Save', array('class' => 'formButton saveButton', 'name' => 'button', 'value' => 'save')) }}

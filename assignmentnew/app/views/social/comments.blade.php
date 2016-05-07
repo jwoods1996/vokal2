@@ -38,8 +38,10 @@
         <div class='form-fields'>
            <div class="form-title">{{ Form::label('name', 'Name: ') }}</div>
            <span class='form-field'>{{ Form::text('name') }}</span><br>
+            <span style="color:yellow;font-style:italic;">{{ $errors->first('name') }}</span>
            <div class="form-title">{{ Form::label('message', 'Message: ') }}</div>
-           <span class="form-field">{{ Form::text('message') }}</span>
+           <span class="form-field">{{ Form::text('message') }}</span><br>
+           <span style="color:yellow;font-style:italic;">{{ $errors->first('message') }}</span>
         </div>
         <div class='buttonBar'>
             {{ Form::submit('Post', array('class' => 'formButton saveButton')) }}

@@ -27,23 +27,24 @@ function create_post() {}
 function add_post() 
 {
 	$input = Input::all();
-//       $v = Validator::make($input, Post::$rules);
-// 	if ($v->passes()) {
-//       	$post->name = $input['name'];
-//       	$post->message = $input['message'];
-//       	$post->save(); 
-	$post = Post::create(array(
-		'image' => 'https://s3.amazonaws.com/whisperinvest-images/default.png',
-		'name' => $input['name'],
-		'title' => $input['title'], 
-		'message' => $input['message'],
-		'commentsAmount' => '0'
+	$v = Validator::make($input, Post::$rules);
+	if ($v->passes()) {
+	    $post->name = $input['name'];
+	    $post->name = $input['title'];
+	    $post->message = $input['message'];
+	    $post->save(); 
+		$post = Post::create(array(
+			'image' => 'https://s3.amazonaws.com/whisperinvest-images/default.png',
+			'name' => $input['name'],
+			'title' => $input['title'], 
+			'message' => $input['message'],
+			'commentsAmount' => '0'
 		));
 		return Redirect::action('PostController@displayPosts');
- //      } else {
-       	//die("ERRORS");
-//       	return Redirect::action('PostController@edit_post', $post->id)->withErrors($v);
- //      }
+	} else {
+	//die("ERRORS");
+		return Redirect::action('PostController@displayPosts')->withErrors($v);
+	}
 } 
 function edit_post($id) 
 {
@@ -65,8 +66,6 @@ function update_post($id)
 			//return Redirect::route('social.update_post', $post->id);
 			return Redirect::action('PostController@displayComments', $post->id);
     	} else {
- 			die("Here, mate");
-    		//die("ERRORS");
     		return Redirect::action('PostController@edit_post', $post->id)->withErrors($v);
     	}	
     } else if ($button = "cancel") {
@@ -88,22 +87,18 @@ function displayComments($postid) {
 function add_comment($id) 
 {
 	$input = Input::all();
-//       $v = Validator::make($input, Post::$rules);
-// 	if ($v->passes()) {
-//       	$post->name = $input['name'];
-//       	$post->message = $input['message'];
-//       	$post->save(); 
+	$post = Post::find($id);
+    $v = Validator::make($input, Comment::$rules);
+ 	if ($v->passes()) {
 		$comment = new Comment;
 		$comment->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
 		$comment->name = $input['name'];
 		$comment->message = $input['message'];
-		$post = Post::find($id);
 		$post->comments()->save($comment);
 		return Redirect::action('PostController@update_comment_amount', $id);
- //      } else {
-       	//die("ERRORS");
-//       	return Redirect::action('PostController@edit_post', $post->id)->withErrors($v);
- //      }	
+	} else {
+		return Redirect::action('PostController@displayComments', $post->id)->withErrors($v);
+	}	
 }
 function delete_comment($postid, $commentid) 
 {
