@@ -29,7 +29,6 @@ class CreatePostsTable extends Migration {
 		function($table)
 		{
 			$table->increments('id');
-			$table->string('image');
 			$table->string('name');
 			$table->string('message');
 			$table->integer('post_id');

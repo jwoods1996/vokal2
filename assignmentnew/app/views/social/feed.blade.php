@@ -3,7 +3,7 @@
 @section('postForm')
     <div class='postForm'>
         <span class='formTitle'>Create post..</span>
-    {{ Form::open(array('method' => 'PUT', 'action' => 'PostController@add_post')) }}
+    {{ Form::open(array('action' => 'post.create')) }}
         <div class='form-fields'>
            <div class="form-title">{{ Form::label('name', 'Name: ') }}</div>
            <span class='form-field'>{{ Form::text('name') }}</span><br>

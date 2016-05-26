@@ -392,3 +392,75 @@ textarea {
     display: block;
     margin-left: 10px;
 }
+
+.userSearch {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.searchBtn {
+}
+
+.userSearch input[type=text] {
+    width: 70%;
+}
+.userSearch input[type=submit] {
+    padding: 2px 8px;
+    background-color: RGBA(80,90,100,200);
+    border:0 none;
+    cursor:pointer;
+}
+
+.loginBlock {
+    width: 100%;
+    color: #CCCCCC;
+    background: #3a464f; /* Old browsers */
+    background: -moz-linear-gradient(top, #3a464f 0%, #13202f 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #3a464f 0%,#13202f 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #3a464f 0%,#13202f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a464f', endColorstr='#13202f',GradientType=1 ); /* IE6-9 */
+    border: 2px solid black;
+    margin-bottom: 20px;
+    padding: 4em;
+    margin-top: 40px;
+    border-radius: 5px;
+}
+
+.loginStatus {
+    font-size: 14pt;
+    float: left;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.createLink {
+    width: 30%;
+    float: right;
+    clear: right;
+}
+
+.loginHeader {
+    height: 4em;
+    margin-bottom: 20px;
+}
+.loginForm {
+    width: 40%;
+}
+.loginForm input[type=text] {
+    float: right;
+    width: 65%;
+}
+.loginForm input[type=password] {
+    float: right;
+    width: 65%;
+}
+.loginForm input[type=submit] {
+    float: right;
+    padding: 2px 8px;
+    background-color: RGBA(80,90,100,200);
+    border:0 none;
+    cursor:pointer;
+}
+
+.createLink a {
+    color: orange;
+}

@@ -1,7 +1,7 @@
 <?php
 
 class Comment extends Eloquent {
-    protected $fillable = ['image', 'name', 'message'];
+    protected $fillable = ['name', 'message'];
     public static $rules = array('name' => 'required', 'message' => 'required'); 
     function post()
     {

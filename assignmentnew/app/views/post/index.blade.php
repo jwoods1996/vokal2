@@ -2,18 +2,23 @@
 
 @section('postForm')
     <div class='postForm'>
-    <form method="post" action = '{{{ secure_url('add_post_action') }}}' >
-        <span class='formTitle'>Create a post..</span>
+        <span class='formTitle'>Create post..</span>
+    {{ Form::open(array('action' => 'post.store')) }}
         <div class='form-fields'>
-           <div class="field-title">Title:</div>
-           <input type="text" name="title" class='form-field' required/><br>
-           <div class="field-title">Name:</div>
-           <input type="text" name="name" class='form-field' required/><br>
-           <div class="field-title">Message:</div>
-           <textarea rows="2" cols="50" name="message" required></textarea><br>
+           <div class="form-title">{{ Form::label('name', 'Name: ') }}</div>
+           <span class='form-field'>{{ Form::text('name') }}</span><br>
+            <span style="color:yellow;font-style:italic;">{{ $errors->first('name') }}</span>
+           <div class="form-title">{{ Form::label('title', 'Title: ') }}</div>
+           <span class='form-field'>{{ Form::text('title') }}</span><br>
+            <span style="color:yellow;font-style:italic;">{{ $errors->first('title') }}</span>
+           <div class="form-title">{{ Form::label('message', 'Message: ') }}</div>
+           <span class="form-field">{{ Form::text('message') }}</span><br>
+           <span style="color:yellow;font-style:italic;">{{ $errors->first('message') }}</span>
         </div>
-        <div class='buttonBar'><input type="submit" class='formButton saveButton'></div>
-    </form>
+        <div class='buttonBar'>
+            {{ Form::submit('Post', array('class' => 'formButton saveButton')) }}
+        </div>
+    {{ Form::close() }}
     </div>
 @stop
 @section('postContainer')
@@ -33,8 +38,16 @@
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a href='{{{ url("edit_post/$post->id") }}}'>Edit</a></li>
-                  <li><a href='{{{ url("delete_post_action/$post->id") }}}'>Delete</a></li>
+                    <li>
+                        {{ Form::open(array('method' => 'GET', 'action' => array('post.edit', $post->id))) }}
+                        {{ Form::submit('Edit', array('class' => 'formButton saveButton')) }}
+                        {{ Form::close() }}
+                    </li>
+                    <li>
+                        {{ Form::open(array('method' => 'DELETE', 'action' => array('post.destroy', $post->id))) }}
+                        {{ Form::submit('Delete', array('class' => 'formButton saveButton')) }}
+                        {{ Form::close() }}
+                    </li>
                 </ul>
             </div>
         </div>
@@ -43,7 +56,12 @@
         </div>
         <div class='postComments'>
             <!--Get the total amount of comments for the relevant post-->
-            <span class='commentCount'>{{{$post->commentsAmount}}} comments</span><span class='commentLink'><a href='{{{ url("comments/$post->id") }}}'>View Comments</a></span>
+            <?php
+            		$comments = $post->comments;
+		            $commentsAmount = count($comments);
+		            $post->commentsAmount = $commentsAmount;
+		      ?>
+            <span class='commentCount'>{{{$post->commentsAmount}}} comments</span><span class='commentLink'><a href='{{{ url("post/$post->id") }}}'>View Comments</a></span>
         </div>
     </div>
 @endforeach

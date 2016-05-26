@@ -18,16 +18,8 @@
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li>
-                        {{ Form::open(array('method' => 'GET', 'action' => array('post.edit', $post->id))) }}
-                        {{ Form::submit('Edit', array('class' => 'formButton saveButton')) }}
-                        {{ Form::close() }}
-                    </li>
-                    <li>
-                        {{ Form::open(array('method' => 'DELETE', 'action' => array('post.destroy', $post->id))) }}
-                        {{ Form::submit('Delete', array('class' => 'formButton saveButton')) }}
-                        {{ Form::close() }}
-                    </li>
+                  <li><a href='{{{ url("edit_post/$post->id") }}}'>Edit</a></li>
+                  <li><a href='{{{ url("delete_post/$post->id") }}}'>Delete</a></li>
                 </ul>
             </div>
         </div>
@@ -42,7 +34,7 @@
 @section('commentForm')
     <div class='commentForm'>
         <span class='formTitle'>Add comment..</span>
-    {{ Form::open(array('action' => array('comment.store', 'id' => $post->id))) }}
+    {{ Form::open(array('method' => 'PUT', 'action' => array('post.update', $post->id))) }}
         <div class='form-fields'>
            <div class="form-title">{{ Form::label('name', 'Name: ') }}</div>
            <span class='form-field'>{{ Form::text('name') }}</span><br>
@@ -72,11 +64,7 @@
                       <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                      <li>
-                        {{ Form::open(array('method' => 'DELETE', 'action' => array('comment.destroy', $comment->id))) }}
-                        {{ Form::submit('Delete', array('class' => 'formButton saveButton')) }}
-                        {{ Form::close() }}
-                      </li>
+                      <li><a href='{{{ url("delete_comment/$post->id/$comment->id") }}}'>Delete</a></li>
                     </ul>
                 </div>
             </div>
