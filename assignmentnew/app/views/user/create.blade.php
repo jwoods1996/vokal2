@@ -2,7 +2,7 @@
 
 @section('createSection')
         @if (Auth::check()) 
-        {{ Auth::user()->username }}
+        {{ Auth::user()->email }}
         Logged in.
         @else
         <div class='loginBlock'>
@@ -10,8 +10,8 @@
         <div class='loginStatus'>Create account</div><div class='createLink'>Already have an account? {{ link_to_route('user.index', 'Log in here') }}</div>
         </div>
         {{ Form::open(array('method' => 'POST', 'url' => secure_url('user'), 'class' => 'loginForm')) }} 
-            {{ Form::label('username', 'Username: ') }}
-            {{ Form::text('username') }}<br><br>
+            {{ Form::label('email', 'Email: ') }}
+            {{ Form::text('email') }}<br><br>
             {{ Form::label('firstName', 'First Name: ') }}
             {{ Form::text('firstName') }}<br><br>
             {{ Form::label('lastName', 'Surname: ') }}

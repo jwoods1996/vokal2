@@ -464,3 +464,50 @@ textarea {
 .createLink a {
     color: orange;
 }
+.personSummary a {
+    color: orange;
+}
+
+.personSummary {
+    height: 120px;
+    width: 50%;
+    color: #CCCCCC;
+    background: #3a464f; /* Old browsers */
+    background: -moz-linear-gradient(top, #3a464f 0%, #13202f 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #3a464f 0%,#13202f 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #3a464f 0%,#13202f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a464f', endColorstr='#13202f',GradientType=1 ); /* IE6-9 */
+    border: 2px solid black;
+    margin-bottom: 20px;
+    padding: 1em;
+    margin-top: 40px;
+    border-radius: 5px;
+}
+.personIcon {
+    width: 25%;
+    float: left;
+}
+.personInfo {
+    font-size: 16pt;
+    width: 70%;
+    float: right;
+}
+.personIcon img {
+    width: 100%;
+}
+
+.profileHeader {
+    height: 210px;
+    width: 100%;
+    color: #CCCCCC;
+    background: #3a464f; /* Old browsers */
+    background: -moz-linear-gradient(top, #3a464f 0%, #13202f 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #3a464f 0%,#13202f 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #3a464f 0%,#13202f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a464f', endColorstr='#13202f',GradientType=1 ); /* IE6-9 */
+    border: 2px solid black;
+    margin-bottom: 20px;
+    padding: 1em;
+    margin-top: 40px;
+    border-radius: 5px;
+}

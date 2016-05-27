@@ -33,9 +33,9 @@
                         @endif
                     </div>
                     <div class='userSearch'>
-                        {{ Form::open(array('method' => 'POST')) }}
-                        {{ Form::label('searchText', 'Find a user:') }}<br>
-                        {{ Form::text('searchText') }}
+                        {{ Form::open(array('method' => 'GET', 'action' => 'user.search')) }}
+                        {{ Form::label('searchTerm', 'Find a user:') }}<br>
+                        {{ Form::text('searchTerm') }}
                         <span class='searchBtn'>
                         {{ Form::submit('Search') }}
                         </span>
@@ -74,6 +74,10 @@
                 @section('comments')
                 @show
                 @section('documentation')
+                @show
+                @section('searchResults')
+                @show
+                @section('userProfile')
                 @show
             </div>
         </div><!-- /.container -->

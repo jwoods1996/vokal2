@@ -14,7 +14,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var string
 	 */
-    public static $rules = array('username' => 'required|unique:users', 'password' => 'required');    
+    public static $rules = array('email' => 'required|unique:users', 'password' => 'required', 'firstName' => 'required', 'lastName' => 'required', 'dob' => 'required');    
+    public static $searchrules = array('searchTerm' => 'required');    
 	protected $table = 'users';
 
 	/**
@@ -23,5 +24,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var array
 	 */
 	protected $hidden = array('password', 'remember_token');
-
+    function posts()
+    {
+        Eloquent::unguard();
+        return $this->hasMany('Post');
+    }
+    //function friends()
+    //{
+    //    Eloquent::unguard();
+    //    return $this->hasMany('Friend');
+    //}
 }

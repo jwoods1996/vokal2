@@ -40,7 +40,7 @@ class UserController extends \BaseController {
  			$user = new User;
  			$firstName = $input['firstName'];
  			$lastName = $input['lastName'];
- 			$user->username = $input['username'];
+ 			$user->email = $input['email'];
 			$user->password = $encrypted;
  			$user->fullName = $input['firstName'] . " " . $input['lastName'];
  			$user->dob = $input['dob'];
@@ -57,7 +57,7 @@ class UserController extends \BaseController {
 	public function login()
 	{
 		$userdata = array(
-			'username' => Input::get('username'),
+			'email' => Input::get('email'),
 			'password' => Input::get('password')
 		);
 		
@@ -85,7 +85,9 @@ class UserController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$user = User::where("email", $id)->first();
+		$posts = Post::orderBy('updated_at', 'DESC')->where("email", $user->id)->get();
+		return View::make('user.show', compact('user', 'posts'));
 	}
 
 
@@ -123,6 +125,14 @@ class UserController extends \BaseController {
 	{
 		//
 	}
-
+	
+	public function search()
+	{
+		$searchTerm = Input::get('searchTerm');
+  		$users = User::all();
+ 		if (!empty($searchTerm)) {
+			return View::make('user.search')->withUsers($users)->with('searchTerm', $searchTerm);
+ 		}
+	}
 
 }

@@ -8,4 +8,9 @@ class Post extends Eloquent {
         Eloquent::unguard();
         return $this->hasMany('Comment');
     }
+    function user()
+    {
+        Eloquent::unguard();
+        return $this->belongsTo('User');
+    }
 }

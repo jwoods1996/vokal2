@@ -1,12 +1,22 @@
 @extends('layout.master')
 
-<!--Display the parent post-->
-@section('singlePost')
-<div class='postFeed'>
+@section('userProfile')
+<div class='profileHeader'>
+    <div class='personIcon'>
+        <img src='{{ $user->image }}'>
+    </div>
+    <div class='personInfo'>
+        {{ $user->fullname }}<br>
+        <span style='font-style:italic'>{{ $user->email }}</span><br>
+        XX years old<br>
+    </div>
+</div>
+@section('postContainer')
+@foreach ($posts as $post)
     <div class='postBox'>
         <div class='postHeader'>
             <div class='postIcon'>
-                <img src='{{{ $post->image }}}' width='50px'></img>
+                <img src='{{{ $post->image }}}' width='50px' height='50px'>
             </div>
             <div class='postDescription'>
                 <span class='postTitle'>{{{ $post->title }}}</span></br>
@@ -34,57 +44,16 @@
         <div class='postContent'>
             {{{ $post->message }}}
         </div>
+        <div class='postComments'>
+            <!--Get the total amount of comments for the relevant post-->
+            <?php
+            		$comments = $post->comments;
+		            $commentsAmount = count($comments);
+		            $post->commentsAmount = $commentsAmount;
+		      ?>
+            <span class='commentCount'>{{{$post->commentsAmount}}} comments</span><span class='commentLink'><a href='{{{ url("post/$post->id") }}}'>View Comments</a></span>
+        </div>
     </div>
-</div>
+@endforeach
 @stop
-
-<!--Display the form for adding a comment-->
-@section('commentForm')
-    <div class='commentForm'>
-        <span class='formTitle'>Add comment..</span>
-    {{ Form::open(array('action' => array('comment.store', 'id' => $post->id))) }}
-        <div class='form-fields'>
-           <div class="form-title">{{ Form::label('name', 'Name: ') }}</div>
-           <span class='form-field'>{{ Form::text('name') }}</span><br>
-            <span style="color:yellow;font-style:italic;">{{ $errors->first('name') }}</span>
-           <div class="form-title">{{ Form::label('message', 'Message: ') }}</div>
-           <span class="form-field">{{ Form::text('message') }}</span><br>
-           <span style="color:yellow;font-style:italic;">{{ $errors->first('message') }}</span>
-        </div>
-        <div class='buttonBar'>
-            {{ Form::submit('Post', array('class' => 'formButton saveButton')) }}
-        </div>
-    {{ Form::close() }}
-    </div>
-@stop
-
-<!--Display the list of comments-->
-@section('comments')
-    @foreach($comments as $comment)
-        <div class='commentBox'>
-            <div class='commentHeader'>
-                <div class='commentDescription'>
-                    <span class='commentName'>Posted by {{{ $comment->name}}}</span>
-                </div>
-                <div class='dropdown postOptions'>
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                      
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li>
-                        {{ Form::open(array('method' => 'DELETE', 'action' => array('comment.destroy', $comment->id))) }}
-                        {{ Form::submit('Delete', array('class' => 'formButton saveButton')) }}
-                        {{ Form::close() }}
-                      </li>
-                    </ul>
-                </div>
-            </div>
-            <div class='commentContent'>
-                {{{ $comment->message }}}
-            </div>
-        </div>
-    @endforeach
-    <div class='bottomMessage'>No more comments</div>
-    <div class='footer'></div>
 @stop

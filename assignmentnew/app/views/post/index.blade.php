@@ -1,9 +1,11 @@
 @extends('layout.master')
 
 @section('postForm')
+    @if (Auth::check()) 
+    {{ Auth::user()->username }}
     <div class='postForm'>
         <span class='formTitle'>Create post..</span>
-    {{ Form::open(array('action' => 'post.store')) }}
+    {{ Form::open(array('action' => array('post.store', Auth::user()->username))) }}
         <div class='form-fields'>
            <div class="form-title">{{ Form::label('name', 'Name: ') }}</div>
            <span class='form-field'>{{ Form::text('name') }}</span><br>
@@ -20,6 +22,7 @@
         </div>
     {{ Form::close() }}
     </div>
+    @endif
 @stop
 @section('postContainer')
 @foreach ($posts as $post)

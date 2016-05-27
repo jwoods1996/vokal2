@@ -139,6 +139,8 @@ public function create()
 public function store()
 {
 	$input = Input::all();
+	$id = $_GET['id'];
+	$user = User::find($id);
 	$post = new Post;
 	$v = Validator::make($input, Post::$rules);
 	if ($v->passes()) {
@@ -147,14 +149,7 @@ public function store()
 	    $post->title = $input['title'];
 	    $post->message = $input['message'];
 	    $post->commentsAmount = 0;
-	    $post->save(); 
-		//$post = Post::create(array(
-		//	'image' => 'https://s3.amazonaws.com/whisperinvest-images/default.png',
-		//	'name' => $input['name'],
-		//	'title' => $input['title'], 
-		//	'message' => $input['message'],
-		//	'commentsAmount' => '0'
-		//));
+	    $user->posts->save($posts); 
 		return Redirect::route('post.index');
 	} else {
 	//die("ERRORS");

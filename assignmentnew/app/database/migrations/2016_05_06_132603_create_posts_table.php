@@ -12,16 +12,17 @@ class CreatePostsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('posts',
-		function($table)
+		Schema::create('posts', function($table) 
 		{
 			$table->increments('id');
 			$table->string('image');
 			$table->string('title');
 			$table->string('name');
 			$table->string('message');
+			$table->string('privacy');
 			$table->string('created_at');
 			$table->string('updated_at');
+			$table->integer('user_id');
 			$table->integer('commentsAmount');
 		});
 		

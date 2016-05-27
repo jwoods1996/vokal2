@@ -31,6 +31,7 @@ Route::get('/', function()
 Route::resource('comment', 'CommentController'); 
 Route::resource('post', 'PostController'); 
 
+Route::get('user/search', array('as' => 'user.search', 'uses' => 'UserController@search'));
 Route::post('user/login', array('as' => 'user.login', 'uses' => 'UserController@login'));
 Route::get('user/logout', array('as' => 'user.logout', 'uses' => 'UserController@logout'));
 Route::resource('user', 'UserController'); 

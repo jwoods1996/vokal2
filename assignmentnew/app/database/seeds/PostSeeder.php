@@ -7,23 +7,29 @@ class PostSeeder extends Seeder {
         $post->name = 'Bob';
         $post->title = "Bob's post 1";
         $post->message = "Bob's public post";
+        $post->privacy = "public";
         $post->commentsAmount = 0;
-        $post->save(); 
+        $post->user_id = 1;
+        $post->save();
         
         $post = new Post;
         $post->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
         $post->name = 'Bob';
         $post->title = "Bob's post 1";
         $post->message = "Bob's friends post";
+        $post->privacy = "friends";
         $post->commentsAmount = 0;
-        $post->save();     
+        $post->user_id = 1;
+        $post->save();
         
         $post = new Post;
         $post->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
         $post->name = 'Bob';
         $post->title = "Bob's post 1";
         $post->message = "Bob's private post";
+        $post->privacy = "private";
         $post->commentsAmount = 0;
-        $post->save();   
+        $post->user_id = 1;
+        $post->save();
     }
 }
