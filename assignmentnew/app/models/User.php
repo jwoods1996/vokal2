@@ -29,6 +29,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         Eloquent::unguard();
         return $this->hasMany('Post');
     }
+    function friends()
+    {
+        Eloquent::unguard();
+        return $this->hasMany('Friend');
+    }
     //function friends()
     //{
     //    Eloquent::unguard();

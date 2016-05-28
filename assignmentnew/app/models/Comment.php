@@ -1,11 +1,16 @@
 <?php
 
 class Comment extends Eloquent {
-    protected $fillable = ['name', 'message'];
-    public static $rules = array('name' => 'required', 'message' => 'required'); 
+    protected $fillable = ['name', 'title', 'message'];
+    public static $rules = array('message' => 'required'); 
     function post()
     {
         Eloquent::unguard();
         return $this->belongsTo('Post');
+    }
+    function user()
+    {
+        Eloquent::unguard();
+        return $this->belongsTo('User');
     }
 }

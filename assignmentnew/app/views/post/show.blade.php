@@ -12,6 +12,8 @@
                 <span class='postTitle'>{{{ $post->title }}}</span></br>
                 <span class='postName'>Posted by {{{ $post->name}}}</span>
             </div>
+            @if (Auth::check())
+            @if ($post->user_id == Auth::user()->id)
             <div class='dropdown postOptions'>
                 <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
                   
@@ -30,6 +32,8 @@
                     </li>
                 </ul>
             </div>
+            @endif
+            @endif
         </div>
         <div class='postContent'>
             {{{ $post->message }}}
@@ -38,25 +42,6 @@
 </div>
 @stop
 
-<!--Display the form for adding a comment-->
-@section('commentForm')
-    <div class='commentForm'>
-        <span class='formTitle'>Add comment..</span>
-    {{ Form::open(array('action' => array('comment.store', 'id' => $post->id))) }}
-        <div class='form-fields'>
-           <div class="form-title">{{ Form::label('name', 'Name: ') }}</div>
-           <span class='form-field'>{{ Form::text('name') }}</span><br>
-            <span style="color:yellow;font-style:italic;">{{ $errors->first('name') }}</span>
-           <div class="form-title">{{ Form::label('message', 'Message: ') }}</div>
-           <span class="form-field">{{ Form::text('message') }}</span><br>
-           <span style="color:yellow;font-style:italic;">{{ $errors->first('message') }}</span>
-        </div>
-        <div class='buttonBar'>
-            {{ Form::submit('Post', array('class' => 'formButton saveButton')) }}
-        </div>
-    {{ Form::close() }}
-    </div>
-@stop
 
 <!--Display the list of comments-->
 @section('comments')
@@ -66,6 +51,8 @@
                 <div class='commentDescription'>
                     <span class='commentName'>Posted by {{{ $comment->name}}}</span>
                 </div>
+                @if (Auth::check())
+                @if ($comment->user_id == Auth::user()->id)
                 <div class='dropdown postOptions'>
                     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
                       
@@ -79,6 +66,8 @@
                       </li>
                     </ul>
                 </div>
+                @endif
+                @endif
             </div>
             <div class='commentContent'>
                 {{{ $comment->message }}}
@@ -87,4 +76,24 @@
     @endforeach
     <div class='bottomMessage'>No more comments</div>
     <div class='footer'></div>
+@stop
+
+
+<!--Display the form for adding a comment-->
+@section('commentForm')
+@if (Auth::check())
+    <div class='commentForm'>
+        <span class='formTitle'>Add comment..</span>
+    {{ Form::open(array('action' => array('comment.store', 'postid' => $post->id, 'userid' => Auth::user()->id))) }}
+        <div class='form-fields'>
+           <div class="form-title">{{ Form::label('message', 'Message: ') }}</div>
+           <span class="form-field">{{ Form::text('message') }}</span><br>
+           <span style="color:yellow;font-style:italic;">{{ $errors->first('message') }}</span>
+        </div>
+        <div class='buttonBar'>
+            {{ Form::submit('Post', array('class' => 'formButton saveButton')) }}
+        </div>
+    {{ Form::close() }}
+    </div>
+@endif
 @stop

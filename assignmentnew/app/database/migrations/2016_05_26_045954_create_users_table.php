@@ -13,23 +13,22 @@ class CreateUsersTable extends Migration {
 	public function up()
 	{
 		Schema::create('users', function($table) {
- 		$table->increments('id');
-		$table->string('email')->unique();
-		$table->string('password')->index();
-		$table->string('fullname');
-		$table->string('dob');
-		$table->string('image');
- 		$table->string('remember_token')->nullable();
- 		$table->timestamps();
-		});
-
-		Schema::create('friends',
-		function($table)
-		{
-			$table->increments('id');
-			$table->integer('user1_id');
-			$table->integer('user2_id');
+ 			$table->increments('id');
+			$table->string('email')->unique();
+			$table->string('password')->index();
+			$table->string('fullname');
+			$table->string('dob');
+			$table->string('image');
+ 			$table->string('remember_token')->nullable();
  			$table->timestamps();
+		});
+		Schema::create('friends', function($table) {
+ 			$table->increments('id');
+			$table->integer('user_id');
+			$table->integer('friend_id');
+			$table->timestamps();
+			$table->foreign('user_id')->references('id')->on('users');
+      		$table->foreign('friend_id')->references('id')->on('users');
 		});
 	}
 
@@ -40,7 +39,9 @@ class CreateUsersTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+
+		Schema::drop('users');
+	//	Schema::drop('friends');
 	}
 
 }

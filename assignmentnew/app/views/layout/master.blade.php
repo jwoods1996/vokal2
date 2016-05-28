@@ -45,10 +45,17 @@
                     <div class='nav-bar'>
                     <ul>
                         <li><a href="{{{ url('post') }}}" class="navbtn">Home</a></li>
+                        @if (Auth::check())
+                        <li>{{ link_to_route('user.show', 'Profile', Auth::user()->email, array('class' => 'navbtn')) }}</li>
+                        @endif
+                        @if (Auth::check())
+                        <li>{{ link_to_route('friend.show', 'Friends', Auth::user()->id, array('class' => 'navbtn')) }}</li>
+                        @endif
                         <li><a href="{{{ url('documentation') }}}" class="navbtn">Documentation</a></li>
-                        <li><a href="{{{ url('friends') }}}" class="navbtn">Friends</a></li>
-                        <li><a href="{{{ url('messages') }}}" class="navbtn">Messages</a></li>
-                        <li><a href="{{{ url('notifications') }}}" class="navbtn">Notifications</a></li>                    
+                        @if (Auth::check())
+                        <li>{{ link_to_route('user.logout', 'Logout', Auth::user()->id, array('class' => 'navbtn')) }}</li>
+                        @endif
+
                     </ul>                        
                     </div>
 
@@ -69,15 +76,19 @@
                 @show
                 @section('singlePost')
                 @show
-                @section('commentForm')
-                @show
                 @section('comments')
+                @show
+                @section('commentForm')
                 @show
                 @section('documentation')
                 @show
                 @section('searchResults')
                 @show
                 @section('userProfile')
+                @show
+                @section('userPosts')
+                @show
+                @section('friendsList')
                 @show
             </div>
         </div><!-- /.container -->

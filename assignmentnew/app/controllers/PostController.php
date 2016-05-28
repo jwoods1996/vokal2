@@ -116,6 +116,9 @@ class PostController extends \BaseController {
 public function index()
 {
 	$posts = Post::orderBy('updated_at', 'DESC')->get();
+	if (Auth::check()) {
+	$friends = User::find(Auth::user()->id)->friends;
+	}
 	return View::make('post.index', compact('posts')); 
 }
 
@@ -140,16 +143,17 @@ public function store()
 {
 	$input = Input::all();
 	$id = $_GET['id'];
-	$user = User::find($id);
+	$user = User::where("id", $id)->first();
 	$post = new Post;
 	$v = Validator::make($input, Post::$rules);
 	if ($v->passes()) {
 		$post->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
-	    $post->name = $input['name'];
+	    $post->name = Auth::user()->fullname;
 	    $post->title = $input['title'];
+	    $post->privacy = $input['privacy'];
 	    $post->message = $input['message'];
 	    $post->commentsAmount = 0;
-	    $user->posts->save($posts); 
+	    $user->posts()->save($post); 
 		return Redirect::route('post.index');
 	} else {
 	//die("ERRORS");
@@ -182,7 +186,9 @@ public function show($id)
 public function edit($id)
 {
 	$post = Post::find($id);
+	if ($post->user_id == Auth::user()->id){
 	return View::make('post.edit')->withPost($post);
+	}
 }
 
 

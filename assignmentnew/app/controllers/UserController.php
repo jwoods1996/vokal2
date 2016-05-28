@@ -86,8 +86,14 @@ class UserController extends \BaseController {
 	public function show($id)
 	{
 		$user = User::where("email", $id)->first();
-		$posts = Post::orderBy('updated_at', 'DESC')->where("email", $user->id)->get();
-		return View::make('user.show', compact('user', 'posts'));
+		$user_id = $user->id;
+		if (Auth::check()) {
+			$friendshipstatus = Friend::where("user_id", Auth::user()->id)->where("friend_id", $user_id)->first();
+		} else {
+			$friendshipstatus = false;
+		}
+		$posts = Post::orderBy('updated_at', 'DESC')->where("user_id", $user->id)->get();
+		return View::make('user.show', compact('user', 'posts', 'friendship', 'friendshipstatus'));
 	}
 
 
@@ -130,9 +136,11 @@ class UserController extends \BaseController {
 	{
 		$searchTerm = Input::get('searchTerm');
   		$users = User::all();
+
  		if (!empty($searchTerm)) {
 			return View::make('user.search')->withUsers($users)->with('searchTerm', $searchTerm);
  		}
+
 	}
 
 }

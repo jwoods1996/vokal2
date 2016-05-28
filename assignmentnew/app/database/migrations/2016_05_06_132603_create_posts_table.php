@@ -33,6 +33,7 @@ class CreatePostsTable extends Migration {
 			$table->string('name');
 			$table->string('message');
 			$table->integer('post_id');
+			$table->integer('user_id');
 			$table->string('created_at');
 			$table->string('updated_at');
 		});

@@ -31,15 +31,21 @@ class CommentController extends \BaseController {
 	public function store()
 	{
 	$input = Input::all();
-	$id = $_GET['id'];
-	$post = Post::find($id);
+	$userid = $_GET['userid'];
+	$postid = $_GET['postid'];
+	$user = User::where("id", $userid)->first();
+	$post = Post::find($postid);
 	$comment = new Comment;
 	$v = Validator::make($input, Comment::$rules);
 	if ($v->passes()) {
-	    $comment->name = $input['name'];
+	    $comment->name = Auth::user()->fullname;
 	    $comment->message = $input['message'];
-	    $post->comments()->save($comment);
-		return Redirect::action('post.show', $id);
+	    //$post->comments()->save($comment);
+	    //$user->comments()->save($comment);
+	    $comment->post()->associate($post);
+	    $comment->user()->associate($user);
+		$comment->save();
+		return Redirect::action('post.show', $postid);
 	} else {
 	//die("ERRORS");
 		return Redirect::action('post.show')->withErrors($v);

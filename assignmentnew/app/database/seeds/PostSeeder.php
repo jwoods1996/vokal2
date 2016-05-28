@@ -15,7 +15,7 @@ class PostSeeder extends Seeder {
         $post = new Post;
         $post->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
         $post->name = 'Bob';
-        $post->title = "Bob's post 1";
+        $post->title = "Bob's post 2";
         $post->message = "Bob's friends post";
         $post->privacy = "friends";
         $post->commentsAmount = 0;
@@ -25,7 +25,7 @@ class PostSeeder extends Seeder {
         $post = new Post;
         $post->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
         $post->name = 'Bob';
-        $post->title = "Bob's post 1";
+        $post->title = "Bob's post 3";
         $post->message = "Bob's private post";
         $post->privacy = "private";
         $post->commentsAmount = 0;
