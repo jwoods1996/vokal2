@@ -30,26 +30,28 @@ class CommentController extends \BaseController {
 	 */
 	public function store()
 	{
-	$input = Input::all();
-	$userid = $_GET['userid'];
-	$postid = $_GET['postid'];
-	$user = User::where("id", $userid)->first();
-	$post = Post::find($postid);
-	$comment = new Comment;
-	$v = Validator::make($input, Comment::$rules);
-	if ($v->passes()) {
-	    $comment->name = Auth::user()->fullname;
-	    $comment->message = $input['message'];
-	    //$post->comments()->save($comment);
-	    //$user->comments()->save($comment);
-	    $comment->post()->associate($post);
-	    $comment->user()->associate($user);
-		$comment->save();
-		return Redirect::action('post.show', $postid);
-	} else {
-	//die("ERRORS");
-		return Redirect::action('post.show')->withErrors($v);
-	}
+		//Retrieve the user id and post id from the url
+		$userid = $_GET['userid'];
+		$postid = $_GET['postid'];
+		//Find the user making the comment and the post being commented on
+		$user = User::where("id", $userid)->first();
+		$post = Post::find($postid);
+		$comment = new Comment;
+		$input = Input::all();
+		//Validate the input
+		$v = Validator::make($input, Comment::$rules);
+		if ($v->passes()) {
+			//Set the values of the comment columns
+		    $comment->name = Auth::user()->fullname;
+		    $comment->message = $input['message'];
+		    //Associate the comment with the post it belongs to, and the user who wrote it
+		    $comment->post()->associate($post);
+		    $comment->user()->associate($user);
+			$comment->save();
+			return Redirect::action('post.show', $postid);
+		} else {
+			return Redirect::action('post.show')->withErrors($v);
+		}
 	}
 
 
@@ -61,8 +63,6 @@ class CommentController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$post = Post::find($id);
-		return Redirect::route('comment.store', $post->id);
 	}
 
 
@@ -98,8 +98,10 @@ class CommentController extends \BaseController {
 	 */
 	public function destroy($id)
 	{	
+		//Find the comment and delete it
 		$comment = Comment::find($id);
 		$comment->delete();
+		//Return to the previous page.
 		return Redirect::back();	
 	}
 

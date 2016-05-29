@@ -10,10 +10,12 @@
         </div>
         {{ Form::open(array('url' => secure_url('user/login'), 'class' => 'loginForm')) }} 
             {{ Form::label('email', 'Email: ') }}
-            {{ Form::text('email') }}<br><br>
+            <div class='form-field'>{{ Form::text('email') }}<br></div>
+            <span style="color:yellow;font-style:italic;">{{ $errors->first('email') }}<br></span>
             {{ Form::label('password', 'Password: ') }}
-            {{ Form::password('password') }}<br><br>
-            {{  Session::pull('login_error') }}
+            <div class='form-field'>{{ Form::password('password') }}<br></div>
+            <span style="color:yellow;font-style:italic;">{{ $errors->first('password') }}<br></span>
+            <span style="color:yellow; font-style:italic; font-weight:bold; font-size: 16pt">{{  Session::pull('login_error') }}</span>
             {{ Form::submit('Login') }}
         {{ Form::close() }}
         </div>

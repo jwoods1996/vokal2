@@ -9,7 +9,6 @@ class UserController extends \BaseController {
 	 */
 	public function index()
 	{
-		
 		return View::make('user.index'); 
 	}
 
@@ -32,18 +31,21 @@ class UserController extends \BaseController {
 	 */
 	public function store()
 	{
+		//Validate input
  		$input = Input::all();
         $v = Validator::make($input, User::$rules);
  		if ($v->passes()) {
 			$password = $input['password'];
+			//Hash the password
  			$encrypted = Hash::make($password);
  			$user = new User;
  			$firstName = $input['firstName'];
  			$lastName = $input['lastName'];
+ 			//Check if the user has uploaded an image, then save it
  			if (Input::hasFile('image'))
 			{
-			$image = $_FILES['image'];	
- 			$user->image = $image;
+				$image = $_FILES['image'];	
+ 				$user->image = $image;
 			}
  			$user->email = $input['email'];
 			$user->password = $encrypted;
@@ -52,32 +54,33 @@ class UserController extends \BaseController {
  			$user->save();
  			return Redirect::route('user.index'); 
         } else {
-       		//die("ERRORS");
         	return Redirect::route('user.create')->withErrors($v);
         }
-
 	}
 	
 	public function login()
 	{
-		$userdata = array(
-			'email' => Input::get('email'),
-			'password' => Input::get('password')
-		);
-		
-		if (Auth::attempt($userdata)){
-			return Redirect::to(URL::previous());
-		} else {
-			 Session::put('login_error', 'Login failed');
-			return Redirect::to(URL::previous())->withInput();
-			
-		}
+ 		$input = Input::all();
+        $v = Validator::make($input, User::$loginrules);
+ 		if ($v->passes()) {
+			$userdata = array(
+				'email' => Input::get('email'),
+				'password' => Input::get('password')
+			);
+			if (Auth::attempt($userdata)){
+				return Redirect::route('post.index');
+			} else {
+				 Session::put('login_error', 'Login failed');
+				return Redirect::to(URL::previous())->withInput();
+			}
+        } else {
+        	return Redirect::route('user.index')->withErrors($v);
+        }		
 	}
 	public function logout()
 	{
 		Auth::logout();
 		return Redirect::action('user.index');
-		
 	}
 
 
@@ -91,21 +94,17 @@ class UserController extends \BaseController {
 	{
 		$user = User::where("email", $id)->first();
 		$user_id = $user->id;
-		if (Auth::check()) {
-			$friendshipstatus = Friend::where("user_id", Auth::user()->id)->where("friend_id", $user_id)->first();
-		} else {
-			$friendshipstatus = false;
-		}
+		$friends = $user->friends;
+		
+		//Calculate age from difference between dob and now
 		$dob = new DateTime($user->dob);
         $dob->format('Y-m-d');
         $datenow = new DateTime();
         $datenow->format('Y-m-d');
         $age = $dob->diff($datenow)->y;
 		$posts = Post::orderBy('updated_at', 'DESC')->where("user_id", $user->id)->get();
-		return View::make('user.show', compact('user', 'posts', 'friendship', 'friendshipstatus', 'age'));
-	
+		return View::make('user.show', compact('user', 'posts', 'age', 'friends'));
 	}
-
 
 	/**
 	 * Show the form for editing the specified resource.
@@ -144,12 +143,7 @@ class UserController extends \BaseController {
 	
 	public function search()
 	{
-		$searchTerm = Input::get('searchTerm');
-  		$users = User::all();
 
- 		if (!empty($searchTerm)) {
-			return View::make('user.search')->withUsers($users)->with('searchTerm', $searchTerm);
- 		}
 
 	}
 

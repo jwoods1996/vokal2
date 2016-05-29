@@ -15,7 +15,7 @@
         <div class="container">
             <div class='col-sm-3'>
                 <div class='sidebar'>
-                    <a class="logo" href=".">Vokal</a></br>
+                    <a href="{{{ url('post') }}}" class="logo">Vokal</a></br>
                     <div class='userInfo'>
                         @if (Auth::check()) 
                             <div class='userIcon'>
@@ -29,9 +29,9 @@
                             </div>              
                             <div class='userName'>
                                 Logged in as:</br>
-                                {{ Auth::user()->firstname }}
-                                {{ Auth::user()->lastname }}
-                                {{ Auth::user()->fullname }}
+                    <?php $user_email = Auth::user()->email ?>
+                    <a href='{{url("user/$user_email") }}'>{{ Auth::user()->fullname }}</a>
+                                
                             </div><!-- User Info -->   
                         @else            
                             <div class='userName'>
@@ -41,12 +41,13 @@
                         @endif
                     </div>
                     <div class='userSearch'>
-                        {{ Form::open(array('method' => 'GET', 'action' => 'user.search')) }}
+                        {{ Form::open(array('method' => 'GET', 'action' => 'friend.index')) }}
                         {{ Form::label('searchTerm', 'Find a user:') }}<br>
-                        {{ Form::text('searchTerm') }}
+                        <span class='form-field'>{{ Form::text('searchTerm') }}</span>
                         <span class='searchBtn'>
                         {{ Form::submit('Search') }}
-                        </span>
+                        </span><br>
+                        <span style="color:yellow;font-style:italic;">{{ $errors->first('searchTerm') }}</span>
                         {{ Form::close() }}                        
                     </div>
                     <!--Navigation Menu-->
@@ -98,6 +99,7 @@
                 @show
                 @section('friendsList')
                 @show
+                
             </div>
         </div><!-- /.container -->
     </body>

@@ -15,8 +15,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-
-li a {
+.nav-bar ul li a {
     display: block;
     width: 100%;
 }
@@ -206,16 +205,14 @@ li a {
 .form-fields {
     margin-left: 8px;
     margin-right: 8px;
+    margin-top: 0.5em;
     padding: 0.5em;
     background: #5A626C;
 }
 
 .form-field {
-
-    border: 1px solid black;
-    margin-bottom: 0.2em;
+    display: inline;
     color: black;
-    width: 40%;
 }
 
 .comment-input {
@@ -278,7 +275,6 @@ li a {
     list-style-type: none;
     padding: 0;
 }
-
 .navbtn {
     padding: 1em;
     text-align: center;
@@ -295,6 +291,29 @@ li a {
 }
 
 .navbtn:hover {
+    color: #333333;
+    background-color: #e6e6e6;
+    text-decoration: none;
+}
+.profnavbtn {
+    float: left;
+    width: 50%;
+    padding: 0.5em;
+    height: 2.5em;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    color: #CCCCCC;
+    background-color: RGBA(80,90,100,200);
+}
+.profnavbtn.focus,
+.profnavbtn:focus {
+    color: #333333;
+    background-color: #e6e6e6;
+    text-decoration: none;
+}
+
+.profnavbtn:hover {
     color: #333333;
     background-color: #e6e6e6;
     text-decoration: none;
@@ -333,8 +352,8 @@ li a {
     clear: left;
     background: #CCCCCC;
     padding: 1em;
+    margin-top: 2px;
     border: 1px solid black;
-    border-radius: 10px;
 }
 
 .postDescription {
@@ -362,6 +381,7 @@ li a {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a464f', endColorstr='#13202f',GradientType=1 ); /* IE6-9 */
     border: 2px solid black;
     padding-bottom: 2.5em;
+    padding-top: 1em;
     margin-top: 40px;
 }
 
@@ -369,7 +389,7 @@ li a {
     display: block;
 }
 
-.postIcon {
+.postIcon{
     float: left;
     margin-bottom: 10px;
 }
@@ -507,7 +527,19 @@ li a {
     cursor:pointer;
 }
 
+.commentDescription a {
+    color: maroon;
+}
 .createLink a {
+    color: orange;
+}
+.userName a {
+    color: orange;
+}
+.postName a {
+    color: #CCC;
+}
+.postTitle a {
     color: orange;
 }
 .personSummary a {
@@ -516,6 +548,7 @@ li a {
 
 .personSummary {
     float: left;
+    font-size: 10pt;
     height: 120px;
     width: 45%;
     color: #CCCCCC;
@@ -527,10 +560,27 @@ li a {
     border: 2px solid black;
     margin-bottom: 20px;
     padding: 1em;
-    margin-top: 40px;
-    margin-right: 2%;
+    margin-top: 1em;
     margin-left: 2%;
-    border-radius: 5px;
+}
+.searchResults {
+    width: 100%;
+    color: #CCCCCC;
+    font-size: 16pt;
+    background: #3a464f; /* Old browsers */
+    background: -moz-linear-gradient(top, #3a464f 0%, #13202f 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #3a464f 0%,#13202f 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #3a464f 0%,#13202f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a464f', endColorstr='#13202f',GradientType=1 ); /* IE6-9 */
+    border: 2px solid black;
+    padding: 1em;  
+}
+.userContainer {
+    overflow: auto;
+    border: 1px solid black;
+    padding: 1em;
+    padding-top: 1em;
+    background: #4c5b67;
 }
 .profileHeader {
     height: 210px;
@@ -551,7 +601,7 @@ li a {
     float: left;
 }
 .personInfo {
-    font-size: 16pt;
+    font-size: 12pt;
     width: 50%;
     padding-left: 20px;
     float: left;
@@ -588,7 +638,6 @@ li a {
     width: 100%;
     color: #CCCCCC;
     border: 2px solid black;
-    margin-bottom: 20px;
     background: #3a464f;
 }
 .friendLink a {

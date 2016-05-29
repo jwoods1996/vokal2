@@ -9,10 +9,27 @@ class FriendController extends \BaseController {
 	 */
 	public function index()
 	{
-	//	$friendships = Friend::where("user_id", Auth::user()->id);
-	//	$friend_id = $friendships->friend_id;
-	//	$friends = User::where("user_id", $friend_id);
-	//	return View::make('friend.index', compact('friends'));
+	    //Validate the input
+ 		$input = Input::all();
+        $v = Validator::make($input, User::$searchrules);
+ 		if ($v->passes()) {
+			$searchTerm = Input::get('searchTerm');
+  			$allusers = User::all();
+  			$users = [];
+ 			$resultCount = 0;
+ 			//Check all the users, if they match with the search query, and add 1 to the results count.
+ 			foreach ($allusers as $user) {
+ 			    //If user's name or email matches the query
+ 			    if ((stripos($user['email'], $searchTerm) !== FALSE) OR stripos($user['fullname'], $searchTerm) !== FALSE) {
+ 			        //Add one to the count and store the user
+ 			        $resultCount += 1;
+ 			        $users[] = $user;
+ 			    }
+ 			}
+			return View::make('friend.index')->withUsers($users)->with('searchTerm', $searchTerm)->with('resultCount', $resultCount);
+        } else {
+        	return Redirect::route('post.index')->withErrors($v);
+        }
 	}
 
 
@@ -33,10 +50,14 @@ class FriendController extends \BaseController {
 	 */
 	public function store()
 	{
+		//Retrieve the user id and friend id from the url
         $user_id = $_GET['user_id'];
         $friend_id = $_GET['friend_id'];
+        
+        //Retrieve the User object of the friend, for redirect purposes
         $person = User::where("id", $friend_id)->first();
         
+        //Create 2 new friendships, one for each direction
         $friend = new Friend;
         $friend->user_id = Auth::user()->id;
         $friend->friend_id = $friend_id;
@@ -46,6 +67,8 @@ class FriendController extends \BaseController {
         $friend->user_id = $friend_id;
         $friend->friend_id = Auth::user()->id;
         $friend->save();
+        
+        //Refresh the page
         return Redirect::action('user.show', $person->email);
 	}
 
@@ -57,27 +80,17 @@ class FriendController extends \BaseController {
 	 * @return Response
 	 */
 	public function show($id)
-	{
-		$user = User::find($id)->first();
-		//die($friends);
+	{	
+		$user = User::where('id', $id)->first();
 		$user_id = $user->id;
-		if (Auth::check()) {
-			$friendshipstatus = Friend::where("user_id", Auth::user()->id)->where("friend_id", $user_id)->first();
-		} else {
-			$friendshipstatus = false;
-		}
-		$friendships = Friend::where("user_id", $id)->get();
-		$friends = [];
-		foreach ($friendships as $friendship) {
-			$friends[] = User::where("id", $friendship->friend_id)->first();
-		}
+		$friends = $user->friends;
 		$dob = new DateTime($user->dob);
         $dob->format('Y-m-d');
         $datenow = new DateTime();
         $datenow->format('Y-m-d');
         $age = $dob->diff($datenow)->y;
 		$posts = Post::orderBy('updated_at', 'DESC')->where("user_id", $user->id)->get();		
-		return View::make('friend.show', compact('user', 'friends', 'friendshipstatus', 'age'));
+		return View::make('friend.show', compact('user', 'friends', 'age'));
 	}
 
 

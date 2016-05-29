@@ -15,10 +15,11 @@
                         @endif
                 </div>   
             </div>
-            <div class='postDescription'>
-                <span class='postTitle'>{{{ $post->title }}}</span></br>
-                <span class='postName'>Posted by {{{ $post->name}}}</span>
-            </div>
+                <div class='postDescription'>
+                    <span class='postTitle'><a href='{{url("post/$post->id") }}'>{{{ $post->title }}}</a></span></br>
+                    <?php $user_email = User::where('id', $post->user_id)->first()->email; ?>
+                    <span class='postName'>Posted by <a href='{{url("user/$user_email") }}'>{{{ $post->name}}}</a></span>
+                </div>
             @if (Auth::check())
             @if ($post->user_id == Auth::user()->id)
             <div class='dropdown postOptions'>
@@ -53,6 +54,7 @@
 <!--Display the list of comments-->
 @section('comments')
     @if ($comments != 'null')
+        {{ $comments->links() }}
         @foreach($comments as $comment)
             <div class='commentBox'>
                 <div class='commentHeader'>
@@ -86,12 +88,14 @@
                 </div>
                 <div class='commentContent'>
                     <div class='commentDescription'>
-                        <span class='commentName'>{{{ $comment->name}}}:  </span>
+                        <?php $user_email = User::where('id', $comment->user_id)->first()->email; ?>
+                        <span class='commentName'><a href='{{url("user/$user_email") }}'>{{{ $comment->name}}}</a></span>
                     </div>
                     {{{ $comment->message }}}
                 </div>
             </div>
         @endforeach
+        {{ $comments->links() }}
     @endif
 @stop
 

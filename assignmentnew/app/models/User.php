@@ -18,6 +18,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface, Stapl
 	 */
     public static $rules = array('email' => 'required|unique:users', 'password' => 'required', 'firstName' => 'required', 'lastName' => 'required', 'dob' => 'required');    
     public static $searchrules = array('searchTerm' => 'required');    
+    public static $loginrules = array('email' => 'required', 'password' => 'required');    
 	protected $table = 'users';
 
 	/**

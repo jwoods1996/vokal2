@@ -29,7 +29,7 @@
                 <img src='{{{ $post->image }}}' width='50px' height='50px'>
             </div>
             <div class='postDescription'>
-                <span class='postTitle'>{{{ $post->title }}}</span></br>
+                <span class='postTitle'><a href='{{{ url("comments/$post->id") }}}'>{{{ $post->title }}}</a></span></br>
                 <span class='postName'>Posted by {{{ $post->name}}}</span>
             </div>
             <div class='dropdown postOptions'>

@@ -3,8 +3,21 @@
 @stop
 @section('searchResults')
 
+<div class='searchResults'>
+	Showing {{ $resultCount }} results for "{{ $searchTerm }}".
+	                    <div class='userSearch'>
+                        {{ Form::open(array('method' => 'GET', 'action' => 'search.index')) }}
+                        {{ Form::label('searchTerm', 'Find a user:') }}<br>
+                        {{ Form::text('searchTerm') }}
+                        <span class='searchBtn'>
+                        {{ Form::submit('Search') }}
+                        </span><br>
+                        <span style="color:yellow;font-style:italic;">{{ $errors->first('searchTerm') }}</span>
+                        {{ Form::close() }}                        
+                    </div>
+</div>
+<div class='userContainer'>
 @foreach ($users as $user) 
-    @if ((stripos($user['email'], $searchTerm) !== FALSE) OR strpos($user['fullName'], $searchTerm) !== FALSE) 
 	     <div class='personSummary'>
 	         <div class='searchIcon'>
                     <?php $user = User::where('id', $user->id)->first(); ?>
@@ -19,6 +32,6 @@
 	             {{ $user->email }}<br>
 	         </div>
 	     </div>
-    @endif
 @endforeach
+</div>
 @stop

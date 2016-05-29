@@ -31,6 +31,7 @@ Route::get('/', function()
 Route::resource('comment', 'CommentController'); 
 Route::resource('post', 'PostController'); 
 Route::resource('friend', 'FriendController'); 
+Route::resource('documentation', 'DocumentationController'); 
 
 Route::get('user/search', array('as' => 'user.search', 'uses' => 'UserController@search'));
 Route::post('user/login', array('as' => 'user.login', 'uses' => 'UserController@login'));
