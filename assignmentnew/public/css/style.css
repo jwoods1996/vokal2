@@ -21,14 +21,14 @@ li a {
     width: 100%;
 }
 
-textarea {
+/*textarea {
     background: #CCCCCC;
     border: 1px solid black;
     margin-bottom: 0.2em;
     color: black;
     width: 100%;
     border-radius: 5px;
-}
+}*/
 
 .bottomMessage {
     color: black;
@@ -68,15 +68,14 @@ textarea {
 
 .commentBox {
     padding: 1em;
+    height: 6em;
     background: #505a64; /* Old browsers */
     background: -moz-linear-gradient(left, #505a64 0%, #828993 99%); /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #505a64 0%,#828993 99%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right, #505a64 0%,#828993 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#505a64', endColorstr='#99a8af',GradientType=1 ); /* IE6-9 */
     padding-bottom: 2em;
-    margin-bottom: 1em;
     border: 2px solid black;
-    border-radius: 10px;
 }
 
 .commentContainer {
@@ -85,18 +84,16 @@ textarea {
 
 .commentContent {
     overflow: auto;
-    clear: left;
-    margin-top: 5%;
+    float: left;
+    width: 80%;
     background: #CCCCCC;
     padding: 1em;
     border: 1px solid black;
-    border-radius: 10px;
 }
 
 .commentDescription {
     clear: right;
     float: left;
-    color: #CCCCCC;
     display: block;
 }
 
@@ -109,18 +106,17 @@ textarea {
 }
 
 .commentForm {
-    width: 50%;
+    
     color: #CCCCCC;
+    padding: 1em;
+    height: 10em;
     background: #3a464f; /* Old browsers */
     background: -moz-linear-gradient(top, #3a464f 0%, #13202f 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #3a464f 0%,#13202f 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #3a464f 0%,#13202f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a464f', endColorstr='#13202f',GradientType=1 ); /* IE6-9 */
+    padding-bottom: 2em;
     border: 2px solid black;
-    padding-bottom: 2.5em;
-    margin-bottom: 40px;
-    margin-top: 1em;
-    border-radius: 5px;
 }
 
 .commentHeader {
@@ -132,7 +128,10 @@ textarea {
 }
 
 .commentName {
+    font-weight: bold;
+    color: maroon;
     font-style: italic;
+    margin-right: 10px;
 }
 
 .commentOptions {
@@ -175,7 +174,6 @@ textarea {
 .footer {
     margin: 100px;
 }
-
 .formButton {
     padding: 0.5em;
     background: #5A626C;
@@ -213,14 +211,48 @@ textarea {
 }
 
 .form-field {
-    background: #CCCCCC;
+
     border: 1px solid black;
     margin-bottom: 0.2em;
     color: black;
     width: 40%;
-    border-radius: 5px;
 }
 
+.comment-input {
+    color: black;
+    height: 50px;
+    width: 100%;
+}
+
+.comment-input input {
+    border: 1px solid black;
+    color: black;
+    height: 50px;
+    width: 80%;
+}
+.commentForm textarea {
+    border: 1px solid black;
+    color: black;
+    height: 50px;
+    width: 80%;
+}
+.postForm textarea {
+    border: 1px solid black;
+    color: black;
+    height: 50px;
+    width: 100%;
+}
+.commentButton {
+    padding: 0.5em;
+    float: right;
+    background: #CCCCCC;
+    width: 20%;
+    margin-right:85px;
+    text-align: center;
+    border: 1px solid black;
+    border-top: none;
+    color: black;
+}
 .logo {
     color: #CCCCCC;
     font-family: 'Times New Roman';
@@ -276,12 +308,14 @@ textarea {
     background: linear-gradient(to right, #505a64 0%,#828993 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#505a64', endColorstr='#99a8af',GradientType=1 ); /* IE6-9 */
     padding-bottom: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     border: 2px solid black;
-    border-radius: 10px;
 }
 
 .postContainer {
+    border: 1px solid black;
+    padding: 1em;
+    padding-top: 4em;
     background: #3a464f; /* Old browsers */
     background: -moz-linear-gradient(top, #3a464f 0%, #13202f 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #3a464f 0%,#13202f 100%); /* Chrome10-25,Safari5.1-6 */
@@ -319,7 +353,7 @@ textarea {
 }
 
 .postForm {
-    width: 50%;
+    width: 100%;
     color: #CCCCCC;
     background: #3a464f; /* Old browsers */
     background: -moz-linear-gradient(top, #3a464f 0%, #13202f 100%); /* FF3.6-15 */
@@ -327,10 +361,8 @@ textarea {
     background: linear-gradient(to bottom, #3a464f 0%,#13202f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a464f', endColorstr='#13202f',GradientType=1 ); /* IE6-9 */
     border: 2px solid black;
-    margin-bottom: 20px;
     padding-bottom: 2.5em;
     margin-top: 40px;
-    border-radius: 5px;
 }
 
 .postHeader {
@@ -344,6 +376,12 @@ textarea {
 .thumbIcon img{
     width: 50px;
     height: 50px;
+    float: left;
+}
+
+.searchIcon img{
+    width: 80px;
+    height: 80px;
     float: left;
 }
 
@@ -477,8 +515,9 @@ textarea {
 }
 
 .personSummary {
+    float: left;
     height: 120px;
-    width: 50%;
+    width: 45%;
     color: #CCCCCC;
     background: #3a464f; /* Old browsers */
     background: -moz-linear-gradient(top, #3a464f 0%, #13202f 100%); /* FF3.6-15 */
@@ -489,6 +528,8 @@ textarea {
     margin-bottom: 20px;
     padding: 1em;
     margin-top: 40px;
+    margin-right: 2%;
+    margin-left: 2%;
     border-radius: 5px;
 }
 .profileHeader {

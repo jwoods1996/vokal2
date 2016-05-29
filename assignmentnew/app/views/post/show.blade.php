@@ -7,16 +7,12 @@
         <div class='postHeader'>
             <div class='postIcon'>             
                 <div class='userIcon'>
-                    @if (Auth::check() AND $post->user_id == Auth::user()->id)   
-                        <img src="{{ asset(Auth::user()->image->url('thumb')) }}">
-                    @else
                         <?php $user = User::where('id', $post->user_id)->first(); ?>
-                        @if ($user->image)
+                        @if ($user->image->url('thumb')=='http://s2945731-jwoods1996.c9users.io/2503ict/assignmentnew/public/images/thumb/missing.png')
                             <img src="{{ $user->image->url('thumb') }}">
                         @else
                             <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
                         @endif
-                    @endif
                 </div>   
             </div>
             <div class='postDescription'>
@@ -56,51 +52,47 @@
 
 <!--Display the list of comments-->
 @section('comments')
-    @foreach($comments as $comment)
-        <div class='commentBox'>
-            <div class='commentHeader'>
-                <div class='commentIcon'>
-                <div class='userIcon'>
-                    @if (Auth::check() AND $comment->user_id == Auth::user()->id)   
-                        <img src="{{ asset(Auth::user()->image->url('thumb')) }}">
-                    @else
-                        <?php $user = User::where('id', $comment->user_id)->first(); ?>
-                        @if ($user->image)
-                            <img src="{{ $user->image->url('thumb') }}">
-                        @else
-                            <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
-                        @endif
+    @if ($comments != 'null')
+        @foreach($comments as $comment)
+            <div class='commentBox'>
+                <div class='commentHeader'>
+                    <div class='commentIcon'>
+                    <div class='userIcon'>
+                            <?php $user = User::where('id', $comment->user_id)->first(); ?>
+                            @if ($user->image->url('thumb')=='http://s2945731-jwoods1996.c9users.io/2503ict/assignmentnew/public/images/thumb/missing.png')
+                                <img src="{{ $user->image->url('thumb') }}">
+                            @else
+                                <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
+                            @endif
+                    </div>
+                    </div>   
+                    @if (Auth::check())
+                    @if ($comment->user_id == Auth::user()->id)
+                    <div class='dropdown postOptions'>
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                          
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            {{ Form::open(array('method' => 'DELETE', 'action' => array('comment.destroy', $comment->id))) }}
+                            {{ Form::submit('Delete', array('class' => 'formButton saveButton')) }}
+                            {{ Form::close() }}
+                          </li>
+                        </ul>
+                    </div>
+                    @endif
                     @endif
                 </div>
-                </div>   
-                <div class='commentDescription'>
-                    <span class='commentName'>Posted by {{{ $comment->name}}}</span>
+                <div class='commentContent'>
+                    <div class='commentDescription'>
+                        <span class='commentName'>{{{ $comment->name}}}:  </span>
+                    </div>
+                    {{{ $comment->message }}}
                 </div>
-                @if (Auth::check())
-                @if ($comment->user_id == Auth::user()->id)
-                <div class='dropdown postOptions'>
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                      
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li>
-                        {{ Form::open(array('method' => 'DELETE', 'action' => array('comment.destroy', $comment->id))) }}
-                        {{ Form::submit('Delete', array('class' => 'formButton saveButton')) }}
-                        {{ Form::close() }}
-                      </li>
-                    </ul>
-                </div>
-                @endif
-                @endif
             </div>
-            <div class='commentContent'>
-                {{{ $comment->message }}}
-            </div>
-        </div>
-    @endforeach
-    <div class='bottomMessage'>No more comments</div>
-    <div class='footer'></div>
+        @endforeach
+    @endif
 @stop
 
 
@@ -110,15 +102,25 @@
     <div class='commentForm'>
         <span class='formTitle'>Add comment..</span>
     {{ Form::open(array('action' => array('comment.store', 'postid' => $post->id, 'userid' => Auth::user()->id))) }}
-        <div class='form-fields'>
-           <div class="form-title">{{ Form::label('message', 'Message: ') }}</div>
-           <span class="form-field">{{ Form::text('message') }}</span><br>
-           <span style="color:yellow;font-style:italic;">{{ $errors->first('message') }}</span>
-        </div>
+            <div class='commentHeader'>
+                <div class='userIcon'>
+                    @if (Auth::check())   
+                        <?php $user = Auth::user(); ?>
+                        @if ($user->image->url('thumb')=='http://s2945731-jwoods1996.c9users.io/2503ict/assignmentnew/public/images/thumb/missing.png')
+                            <img src="{{ $user->image->url('thumb') }}">
+                        @else
+                            <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
+                        @endif
+                    @endif
+                </div>
+            </div>  
+           <span class="comment-input">{{ Form::textarea('message', '', array('rows' => '2', 'cols' => '80')) }}</span><br>
         <div class='buttonBar'>
-            {{ Form::submit('Post', array('class' => 'formButton saveButton')) }}
+            {{ Form::submit('Post', array('class' => 'commentButton')) }}
         </div>
+           <span style="color:yellow;font-style:italic;">{{ $errors->first('message') }}</span>
     {{ Form::close() }}
     </div>
+    <div class='footer'></div>
 @endif
 @stop

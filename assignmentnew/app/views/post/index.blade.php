@@ -12,7 +12,7 @@
            <div class="form-title">{{ Form::label('privacy', 'Privacy: ') }}</div>
            <span class='form-field'>{{ Form::select('privacy', array('public' => 'Public', 'friends' => 'Friends', 'private' => 'Private'), 'Public')}}</span><br>
            <div class="form-title">{{ Form::label('message', 'Message: ') }}</div>
-           <span class="form-field">{{ Form::text('message') }}</span><br>
+           <span class="post-input">{{ Form::textarea('message', '', array('rows' => '2', 'cols' => '40')) }}</span><br>
            <span style="color:yellow;font-style:italic;">{{ $errors->first('message') }}</span>
         </div>
         <div class='buttonBar'>
@@ -23,6 +23,7 @@
     @endif
 @stop
 @section('postContainer')
+<div class='postContainer'>
 @foreach ($posts as $post)
     <?php $user = User::where('id', $post->user_id)->first(); ?>
     @if ($post->privacy == 'public')
@@ -30,16 +31,12 @@
             <div class='postHeader'>
                 <div class='postIcon'>
                 <div class='userIcon'>
-                    @if (Auth::check() AND $post->user_id == Auth::user()->id)   
-                        <img src="{{ asset(Auth::user()->image->url('thumb')) }}">
-                    @else
                         <?php $user = User::where('id', $post->user_id)->first(); ?>
-                        @if ($user->image)
+                        @if ($user->image->url('thumb')=='http://s2945731-jwoods1996.c9users.io/2503ict/assignmentnew/public/images/thumb/missing.png')
                             <img src="{{ asset($user->image->url('thumb')) }}">
                         @else
                             <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
                         @endif
-                    @endif
                 </div>   
                 </div>
                 <div class='postDescription'>
@@ -149,7 +146,7 @@
                             @if (Auth::check() AND $user->id == Auth::user()->id)   
                                 <img src="{{ asset(Auth::user()->image->url('thumb')) }}">
                             @else
-                                @if ($user->image)
+                                @if ($user->image->url('thumb')=='http://s2945731-jwoods1996.c9users.io/2503ict/assignmentnew/public/images/thumb/missing.png')
                                     <img src="{{ asset($user->image->url('thumb')) }}">
                                 @else
                                     <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
@@ -246,6 +243,7 @@
 		@endif
     @endif
 @endforeach
+</div>
 @stop
 
 

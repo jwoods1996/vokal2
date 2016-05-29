@@ -40,12 +40,15 @@ class UserController extends \BaseController {
  			$user = new User;
  			$firstName = $input['firstName'];
  			$lastName = $input['lastName'];
- 			$image = $_FILES['image'];
+ 			if (Input::hasFile('image'))
+			{
+			$image = $_FILES['image'];	
+ 			$user->image = $image;
+			}
  			$user->email = $input['email'];
 			$user->password = $encrypted;
  			$user->fullName = $input['firstName'] . " " . $input['lastName'];
  			$user->dob = $input['dob'];
- 			$user->image = $image;
  			$user->save();
  			return Redirect::route('user.index'); 
         } else {
@@ -93,8 +96,14 @@ class UserController extends \BaseController {
 		} else {
 			$friendshipstatus = false;
 		}
+		$dob = new DateTime($user->dob);
+        $dob->format('Y-m-d');
+        $datenow = new DateTime();
+        $datenow->format('Y-m-d');
+        $age = $dob->diff($datenow)->y;
 		$posts = Post::orderBy('updated_at', 'DESC')->where("user_id", $user->id)->get();
-		return View::make('user.show', compact('user', 'posts', 'friendship', 'friendshipstatus'));
+		return View::make('user.show', compact('user', 'posts', 'friendship', 'friendshipstatus', 'age'));
+	
 	}
 
 

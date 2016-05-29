@@ -4,25 +4,17 @@
 <div>
 <div class='profileHeader'>
     <div class='profileIcon'>
-        @if (Auth::check() AND $user->id == Auth::user()->id)   
-            <img src="{{ asset(Auth::user()->image->url('medium')) }}">
-        @else
             <?php $user = User::where('id', $user->id)->first(); ?>
-            @if ($user->image)
+            @if ($user->image->url('thumb')=='http://s2945731-jwoods1996.c9users.io/2503ict/assignmentnew/public/images/thumb/missing.png')
                 <img src="{{ asset(asset($user->image->url('medium'))) }}">
             @else
                 <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
             @endif
-        @endif
     </div>
     <div class='personInfo'>
         {{ $user->fullname }}<br>
         <span style='font-style:italic'>{{ $user->email }}</span><br>
-        <?php $dob = new DateTime($user->dob);
-        $dob->format('Y-m-d');
-        $datenow = new DateTime();
-        $datenow->format('Y-m-d');
-        $age = $dob->diff($datenow)->y;?>
+
         {{ $age . ' years old.' }}
         <br><br>
     @if (Auth::check())
@@ -64,43 +56,39 @@
         <div class='postBox'>
             <div class='postHeader'>
                 <div class='thumbIcon'>
-                    @if (Auth::check() AND $user->id == Auth::user()->id)   
-                        <img src="{{ asset(Auth::user()->image->url('thumb')) }}">
-                    @else
                         <?php $user = User::where('id', $user->id)->first(); ?>
-                        @if ($user->image)
+                        @if ($user->image->url('thumb')=='http://s2945731-jwoods1996.c9users.io/2503ict/assignmentnew/public/images/thumb/missing.png')
                             <img src="{{ asset($user->image->url('thumb')) }}">
                         @else
                             <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
                         @endif
-                    @endif
                 </div>
                 <div class='postDescription'>
                     <span class='postTitle'>{{{ $post->title }}}</span></br>
                     <span class='postName'>Posted by {{{ $post->name}}}</span>
                 </div>
-        @if (Auth::check())
-        @if ($post->user_id == Auth::user()->id)
-        <div class='dropdown postOptions'>
-            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-              
-              <span class="caret"></span>
-            </button>
-                    <ul class="dropdown-menu">
-                        <li>
-                            {{ Form::open(array('method' => 'GET', 'action' => array('post.edit', $post->id))) }}
-                            {{ Form::submit('Edit', array('class' => 'formButton saveButton')) }}
-                            {{ Form::close() }}
-                        </li>
-                        <li>
-                            {{ Form::open(array('method' => 'DELETE', 'action' => array('post.destroy', $post->id))) }}
-                            {{ Form::submit('Delete', array('class' => 'formButton saveButton')) }}
-                            {{ Form::close() }}
-                        </li>
-                    </ul>
-        </div>
-        @endif
-        @endif
+                @if (Auth::check())
+                @if ($post->user_id == Auth::user()->id)
+                <div class='dropdown postOptions'>
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                      
+                      <span class="caret"></span>
+                    </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    {{ Form::open(array('method' => 'GET', 'action' => array('post.edit', $post->id))) }}
+                                    {{ Form::submit('Edit', array('class' => 'formButton saveButton')) }}
+                                    {{ Form::close() }}
+                                </li>
+                                <li>
+                                    {{ Form::open(array('method' => 'DELETE', 'action' => array('post.destroy', $post->id))) }}
+                                    {{ Form::submit('Delete', array('class' => 'formButton saveButton')) }}
+                                    {{ Form::close() }}
+                                </li>
+                            </ul>
+                </div>
+                @endif
+                @endif
             </div>
             <div class='postContent'>
                 {{{ $post->message }}}
@@ -123,16 +111,12 @@
             <div class='postHeader'>
                 <div class='postIcon'>
                 <div class='thumbIcon'>
-                    @if (Auth::check() AND $user->id == Auth::user()->id)   
-                        <img src="{{ asset(Auth::user()->image->url('thumb')) }}">
-                    @else
                         <?php $user = User::where('id', $user->id)->first(); ?>
-                        @if ($user->image)
+                        @if ($user->image->url('thumb')=='http://s2945731-jwoods1996.c9users.io/2503ict/assignmentnew/public/images/thumb/missing.png')
                             <img src="{{ asset($user->image->url('thumb')) }}">
                         @else
                             <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
                         @endif
-                    @endif
                 </div>
                 </div>
                 <div class='postDescription'>
@@ -184,16 +168,12 @@
                     <div class='postHeader'>
                         <div class='postIcon'>
                             <div class='thumbIcon'>
-                                @if (Auth::check() AND $user->id == Auth::user()->id)   
-                                    <img src="{{ asset(Auth::user()->image->url('thumb')) }}">
-                                @else
                                     <?php $user = User::where('id', $user->id)->first(); ?>
-                                    @if ($user->image)
+                                    @if ($user->image->url('thumb')=='http://s2945731-jwoods1996.c9users.io/2503ict/assignmentnew/public/images/thumb/missing.png')
                                         <img src="{{ asset($user->image->url('thumb')) }}">
                                     @else
                                         <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
                                     @endif
-                                @endif
                             </div>
                         </div>
                         <div class='postDescription'>

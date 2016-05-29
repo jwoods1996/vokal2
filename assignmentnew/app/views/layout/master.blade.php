@@ -19,7 +19,13 @@
                     <div class='userInfo'>
                         @if (Auth::check()) 
                             <div class='userIcon'>
-                                <img src="{{ asset(Auth::user()->image->url('thumb')) }}">
+                                <div class='thumbIcon'>
+                                        @if (Auth::user()->image->url('thumb')=='http://s2945731-jwoods1996.c9users.io/2503ict/assignmentnew/public/images/thumb/missing.png')
+                                            <img src="{{ asset($user->image->url('thumb')) }}">
+                                        @else
+                                            <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
+                                        @endif
+                                </div>  
                             </div>              
                             <div class='userName'>
                                 Logged in as:</br>

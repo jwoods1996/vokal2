@@ -2,22 +2,18 @@
 @section('userProfile')
 <div>
 <div class='profileHeader'>
-    <div class='thumbIcon'>
-        @if (Auth::check() AND $user->id == Auth::user()->id)   
-            <img src="{{ asset(Auth::user()->image->url('thumb')) }}">
-        @else
+    <div class='profileIcon'>
             <?php $user = User::where('id', $user->id)->first(); ?>
-            @if ($user->image)
-                <img src="{{ $user->image->url('thumb') }}">
+            @if ($user->image->url('thumb')=='http://s2945731-jwoods1996.c9users.io/2503ict/assignmentnew/public/images/thumb/missing.png')
+                <img src="{{ $user->image->url('medium') }}">
             @else
                 <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
             @endif
-        @endif
-    </di
+    </div>
     <div class='personInfo'>
         {{ $user->fullname }}<br>
         <span style='font-style:italic'>{{ $user->email }}</span><br>
-        XX years old<br>
+        {{ $age . ' years old.' }}<br>
     
     </div>
     <div class='interact'>
@@ -56,12 +52,18 @@
     @foreach ($friends as $friend)
 	     <div class='personSummary'>
 	         <div class='personIcon'>
-	             <img src='{{ $friend->image }}'>
+                <div class='searchIcon'>
+                        <?php $user = User::where('id', $friend->id)->first(); ?>
+                        @if ($user->image->url('thumb')=='http://s2945731-jwoods1996.c9users.io/2503ict/assignmentnew/public/images/thumb/missing.png')
+                            <img src="{{ asset($user->image->url('thumb')) }}">
+                        @else
+                            <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
+                        @endif
+                </div>  
 	         </div>
 	         <div class='personInfo'>
 	             {{ link_to_route('user.show', $friend->fullname, $friend->email) }}<br>
 	             {{ $friend->email }}<br>
-	             {{ $friend->dob }}<br>
 	         </div>
 	     </div>
     @endforeach

@@ -71,8 +71,13 @@ class FriendController extends \BaseController {
 		foreach ($friendships as $friendship) {
 			$friends[] = User::where("id", $friendship->friend_id)->first();
 		}
-		
-		return View::make('friend.show', compact('user', 'friends', 'friendshipstatus'));
+		$dob = new DateTime($user->dob);
+        $dob->format('Y-m-d');
+        $datenow = new DateTime();
+        $datenow->format('Y-m-d');
+        $age = $dob->diff($datenow)->y;
+		$posts = Post::orderBy('updated_at', 'DESC')->where("user_id", $user->id)->get();		
+		return View::make('friend.show', compact('user', 'friends', 'friendshipstatus', 'age'));
 	}
 
 

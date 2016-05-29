@@ -9,7 +9,6 @@ class UserSeeder extends Seeder {
 		$user->password = $encrypted;
  		$user->fullName = 'Bob';
  		$user->dob = new DateTime('6 May 1984');
- 		$user->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
  		$user->save();
 
         $password='1234';
@@ -19,7 +18,6 @@ class UserSeeder extends Seeder {
 		$user->password = $encrypted;
  		$user->fullName = 'John';
  		$user->dob = new DateTime('6 May 1984');
- 		$user->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
  		$user->save();
 
         $password='1234';
@@ -29,7 +27,6 @@ class UserSeeder extends Seeder {
 		$user->password = $encrypted;
  		$user->fullName = 'Tom';
  		$user->dob = new DateTime('6 May 1984');
- 		$user->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
  		$user->save();
 
         $password='1234';
@@ -39,7 +36,6 @@ class UserSeeder extends Seeder {
 		$user->password = $encrypted;
  		$user->fullName = 'Derek';
  		$user->dob = new DateTime('6 May 1984');
- 		$user->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
  		$user->save();
 
         $password='1234';
@@ -49,7 +45,7 @@ class UserSeeder extends Seeder {
 		$user->password = $encrypted;
  		$user->fullName = 'Bill';
  		$user->dob = new DateTime('6 May 1984');
- 		$user->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
+ 		
  		$user->save();
 
         $password='1234';
@@ -59,7 +55,7 @@ class UserSeeder extends Seeder {
 		$user->password = $encrypted;
  		$user->fullName = 'Ben';
  		$user->dob = new DateTime('6 May 1984');
- 		$user->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
+ 		
  		$user->save();
 
         $password='1234';
@@ -69,7 +65,7 @@ class UserSeeder extends Seeder {
 		$user->password = $encrypted;
  		$user->fullName = 'Carl';
  		$user->dob = new DateTime('6 May 1984');
- 		$user->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
+ 		
  		$user->save();
 
         $password='1234';
@@ -79,7 +75,7 @@ class UserSeeder extends Seeder {
 		$user->password = $encrypted;
  		$user->fullName = 'Stacy';
  		$user->dob = new DateTime('6 May 1984');
- 		$user->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
+ 		
  		$user->save();
 
         $password='1234';
@@ -89,7 +85,7 @@ class UserSeeder extends Seeder {
 		$user->password = $encrypted;
  		$user->fullName = 'Claire';
  		$user->dob = new DateTime('6 May 1984');
- 		$user->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
+ 		
  		$user->save();
 
         $password='1234';
@@ -99,7 +95,7 @@ class UserSeeder extends Seeder {
 		$user->password = $encrypted;
  		$user->fullName = 'Trisha';
  		$user->dob = new DateTime('6 May 1984');
- 		$user->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
+ 		
  		$user->save();
     }
 }

@@ -171,8 +171,13 @@ public function store()
 public function show($id)
 {
 	$post = Post::find($id);
-	$comments = Post::find($id)->comments;
-	return View::make('post.show', compact('post', 'comments'));
+	if ($post->comments->count()>0) {
+		$comments = $post->comments;
+	} else {
+		$comments = 'null';
+		$comment = 'null';
+	}
+	return View::make('post.show', compact('post', 'comments', 'comment'));
 
 }
 
