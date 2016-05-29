@@ -205,7 +205,8 @@ public function update($id)
 	$v = Validator::make($input, Post::$rules);
 	if ($v->passes()) {
 		$post->title = $input['title'];
-	    $post->name = $input['name'];
+		$post->privacy = $input['privacy'];
+	    $post->name = Auth::user()->fullname;
 	    $post->message = $input['message'];
 	    $post->save(); 
 		return Redirect::route('post.show', $post->id);

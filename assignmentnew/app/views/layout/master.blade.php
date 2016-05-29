@@ -6,8 +6,10 @@
         <title>Vokal</title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="{{{ secure_url('css/style.css') }}}" rel="stylesheet">
-        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
     </head>
     <body>
         <div class="container">
@@ -17,7 +19,7 @@
                     <div class='userInfo'>
                         @if (Auth::check()) 
                             <div class='userIcon'>
-                                <img src='{{ Auth::user()->image }}' width='50'>
+                                <img src="{{ asset(Auth::user()->image->url('thumb')) }}">
                             </div>              
                             <div class='userName'>
                                 Logged in as:</br>

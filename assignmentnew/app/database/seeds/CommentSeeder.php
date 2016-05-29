@@ -3,107 +3,73 @@
 class CommentSeeder extends Seeder {
     function run() {
         $comment = new Comment;
-        $comment->name = 'Bob';
-        $comment->message = 'This is a comment';
-        $post = Post::find(1);
-        
-        $comment->user_id = 1;
+        $comment->name = 'John';
+        $comment->message = 'First comment';
+        $post = Post::find(4);
+        $comment->user_id = 2;
         $post->comments()->save($comment);
         
         $comment = new Comment;
-        $comment->name = 'Bob';
-        $comment->message = 'This is a extra comment on the first post';
-        $post = Post::find(1);
-        
-        $comment->user_id = 1;
+        $comment->name = 'John';
+        $comment->message = 'Second comment';
+        $post = Post::find(4);
+        $comment->user_id = 2;
         $post->comments()->save($comment);
         
         $comment = new Comment;
-        $comment->name = 'Bob';
-        $comment->message = 'This is a extra comment on the first post';
-        $post = Post::find(1);
-        
-        $comment->user_id = 1;
+        $comment->name = 'John';
+        $comment->message = 'Third comment';
+        $post = Post::find(4);
+        $comment->user_id = 2;
         $post->comments()->save($comment);
         
         $comment = new Comment;
-        $comment->name = 'Bob';
-        $comment->message = 'This is a extra comment on the first post';
-        $post = Post::find(1);
-        
-        $comment->user_id = 1;
+        $comment->name = 'John';
+        $comment->message = 'Fourth comment';
+        $post = Post::find(4);
+        $comment->user_id = 2;
         $post->comments()->save($comment);
         
         $comment = new Comment;
-        $comment->name = 'Bob';
-        $comment->message = 'This is a extra comment on the first post';
-        $post = Post::find(1);
-        
-        $comment->user_id = 1;
+        $comment->name = 'John';
+        $comment->message = 'Fifth comment';
+        $post = Post::find(4);
+        $comment->user_id = 2;
         $post->comments()->save($comment);
         
         $comment = new Comment;
-        $comment->name = 'Bob';
-        $comment->message = 'This is a extra comment on the first post';
-        $post = Post::find(1);
-        
-        $comment->user_id = 1;
+        $comment->name = 'John';
+        $comment->message = 'Sixth comment';
+        $post = Post::find(4);
+        $comment->user_id = 2;
         $post->comments()->save($comment);
         
         $comment = new Comment;
-        $comment->name = 'Bob';
-        $comment->message = 'This is a extra comment on the first post';
-        $post = Post::find(1);
-        
-        $comment->user_id = 1;
+        $comment->name = 'John';
+        $comment->message = 'Seventh comment';
+        $post = Post::find(4);
+        $comment->user_id = 2;
         $post->comments()->save($comment);
         
         $comment = new Comment;
-        $comment->name = 'Bob';
-        $comment->message = 'This is a extra comment on the first post';
-        $post = Post::find(1);
-        
-        $comment->user_id = 1;
+        $comment->name = 'John';
+        $comment->message = 'Eighth comment';
+        $post = Post::find(4);
+        $comment->user_id = 2;
         $post->comments()->save($comment);
         
         $comment = new Comment;
-        $comment->name = 'Bob';
-        $comment->message = 'This is a extra comment on the first post';
-        $post = Post::find(1);
-        
-        $comment->user_id = 1;
+        $comment->name = 'John';
+        $comment->message = 'Ninth comment';
+        $post = Post::find(4);
+        $comment->user_id = 2;
         $post->comments()->save($comment);
         
         $comment = new Comment;
-        $comment->name = 'Bob';
-        $comment->message = 'This is a extra comment on the first post';
-        $post = Post::find(1);
-        
-        $comment->user_id = 1;
-        $post->comments()->save($comment);
-        
-        $comment = new Comment;
-        $comment->name = 'Bob';
-        $comment->message = 'This is another comment';
-        $post = Post::find(2);
-        
-        $comment->user_id = 1;
-        $post->comments()->save($comment);
-        
-        $comment = new Comment;
-        $comment->name = 'Bob';
-        $comment->message = 'This is another comment on the second post';
-        $post = Post::find(2);
-        
-        $comment->user_id = 1;
-        $post->comments()->save($comment); 
-        
-        $comment = new Comment;
-        $comment->name = 'Bob';
-        $comment->message = 'This is yet another comment';
-        $post = Post::find(3);
-        
-        $comment->user_id = 1;
+        $comment->name = 'John';
+        $comment->message = 'Tenth comment';
+        $post = Post::find(4);
+        $comment->user_id = 2;
         $post->comments()->save($comment);
     }
 }

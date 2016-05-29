@@ -5,8 +5,19 @@
 <div class='postFeed'>
     <div class='postBox'>
         <div class='postHeader'>
-            <div class='postIcon'>
-                <img src='{{{ $post->image }}}' width='50px'></img>
+            <div class='postIcon'>             
+                <div class='userIcon'>
+                    @if (Auth::check() AND $post->user_id == Auth::user()->id)   
+                        <img src="{{ asset(Auth::user()->image->url('thumb')) }}">
+                    @else
+                        <?php $user = User::where('id', $post->user_id)->first(); ?>
+                        @if ($user->image)
+                            <img src="{{ $user->image->url('thumb') }}">
+                        @else
+                            <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
+                        @endif
+                    @endif
+                </div>   
             </div>
             <div class='postDescription'>
                 <span class='postTitle'>{{{ $post->title }}}</span></br>
@@ -48,6 +59,20 @@
     @foreach($comments as $comment)
         <div class='commentBox'>
             <div class='commentHeader'>
+                <div class='commentIcon'>
+                <div class='userIcon'>
+                    @if (Auth::check() AND $comment->user_id == Auth::user()->id)   
+                        <img src="{{ asset(Auth::user()->image->url('thumb')) }}">
+                    @else
+                        <?php $user = User::where('id', $comment->user_id)->first(); ?>
+                        @if ($user->image)
+                            <img src="{{ $user->image->url('thumb') }}">
+                        @else
+                            <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
+                        @endif
+                    @endif
+                </div>
+                </div>   
                 <div class='commentDescription'>
                     <span class='commentName'>Posted by {{{ $comment->name}}}</span>
                 </div>

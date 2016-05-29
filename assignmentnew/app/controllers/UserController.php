@@ -40,11 +40,12 @@ class UserController extends \BaseController {
  			$user = new User;
  			$firstName = $input['firstName'];
  			$lastName = $input['lastName'];
+ 			$image = $_FILES['image'];
  			$user->email = $input['email'];
 			$user->password = $encrypted;
  			$user->fullName = $input['firstName'] . " " . $input['lastName'];
  			$user->dob = $input['dob'];
- 			$user->image = 'https://s3.amazonaws.com/whisperinvest-images/default.png';
+ 			$user->image = $image;
  			$user->save();
  			return Redirect::route('user.index'); 
         } else {

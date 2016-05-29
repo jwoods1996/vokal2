@@ -67,10 +67,10 @@ class FriendController extends \BaseController {
 			$friendshipstatus = false;
 		}
 		$friendships = Friend::where("user_id", $id)->get();
-		//$friends = [];
-		//foreach ($friendships as $friendship) {
-		//	$friends[] = User::where("id", $friendship->friend_id)->first();
-		//}
+		$friends = [];
+		foreach ($friendships as $friendship) {
+			$friends[] = User::where("id", $friendship->friend_id)->first();
+		}
 		
 		return View::make('friend.show', compact('user', 'friends', 'friendshipstatus'));
 	}
@@ -108,10 +108,14 @@ class FriendController extends \BaseController {
 	 */
 	public function destroy($id)
 	{	
-		$friend = Friend::where("id", $id);
+		//$friend = Friend::where("id", $id);
         $friend_id = $_GET['friend_id'];
+        $user_id = $_GET['user_id'];
+		$friendship1 = Friend::where("friend_id", $friend_id)->where("user_id", $user_id);
+		$friendship2 = Friend::where("friend_id", $user_id)->where("user_id", $friend_id);
 		$person = User::where("id", $friend_id)->first();
-		$friend->delete();
+		$friendship1->delete();
+		$friendship2->delete();
         return Redirect::action('user.show', $person->email);
 	}
 

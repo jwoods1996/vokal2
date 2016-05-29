@@ -4,10 +4,12 @@ use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
+use Codesleeve\Stapler\ORM\StaplerableInterface;
+use Codesleeve\Stapler\ORM\EloquentTrait;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends Eloquent implements UserInterface, RemindableInterface, StaplerableInterface {
 
-	use UserTrait, RemindableTrait;
+	use UserTrait, RemindableTrait, EloquentTrait;
 
 	/**
 	 * The database table used by the model.
@@ -39,4 +41,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     //    Eloquent::unguard();
     //    return $this->hasMany('Friend');
     //}
+    public function __construct(array $attributes = array()) {
+    $this->hasAttachedFile('image', [
+    'styles' => [
+    'medium' => '300x300',
+    'thumb' => '100x100'
+    ]
+    ]);
+    parent::__construct($attributes);
+    }
 }

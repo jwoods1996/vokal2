@@ -9,7 +9,7 @@
         <div class='loginHeader'>
         <div class='loginStatus'>Create account</div><div class='createLink'>Already have an account? {{ link_to_route('user.index', 'Log in here') }}</div>
         </div>
-        {{ Form::open(array('method' => 'POST', 'url' => secure_url('user'), 'class' => 'loginForm')) }} 
+        {{ Form::open(array('method' => 'POST', 'url' => secure_url('user'), 'class' => 'loginForm', 'files' => true)) }} 
             {{ Form::label('email', 'Email: ') }}
             {{ Form::text('email') }}<br><br>
             {{ Form::label('firstName', 'First Name: ') }}
@@ -17,9 +17,11 @@
             {{ Form::label('lastName', 'Surname: ') }}
             {{ Form::text('lastName') }}<br><br>
             {{ Form::label('dob', 'Date of birth: ') }}
-            {{ Form::text('dob') }}<br><br>
+            {{ Form::input('date', 'dob') }}<br><br>
             {{ Form::label('password', 'Password: ') }}
             {{ Form::password('password') }}<br><br>
+            {{ Form::label('image', 'Profile photo: ') }}<br><br>
+            {{ Form::file('image') }}<br><br>
             {{  Session::pull('login_error') }}
             {{ Form::submit('Login') }}
         {{ Form::close() }}

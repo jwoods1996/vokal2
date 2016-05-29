@@ -2,9 +2,18 @@
 @section('userProfile')
 <div>
 <div class='profileHeader'>
-    <div class='personIcon'>
-        <img src='{{ $user->image }}'>
-    </div>
+    <div class='thumbIcon'>
+        @if (Auth::check() AND $user->id == Auth::user()->id)   
+            <img src="{{ asset(Auth::user()->image->url('thumb')) }}">
+        @else
+            <?php $user = User::where('id', $user->id)->first(); ?>
+            @if ($user->image)
+                <img src="{{ $user->image->url('thumb') }}">
+            @else
+                <img src="https://s3.amazonaws.com/whisperinvest-images/default.png">
+            @endif
+        @endif
+    </di
     <div class='personInfo'>
         {{ $user->fullname }}<br>
         <span style='font-style:italic'>{{ $user->email }}</span><br>
@@ -13,7 +22,7 @@
     </div>
     <div class='interact'>
     @if (Auth::check())
-        
+        @if ($user->id != Auth::user()->id)
         @if ($friendshipstatus)
                 {{ Form::open(array('method' => 'DELETE', 'action' => array('friend.destroy', $friendshipstatus->id, 'friend_id' => $user->id))) }}
                 {{ Form::submit('Remove Friend', array('class' => 'friendBtn')) }}
@@ -22,6 +31,7 @@
                 {{ Form::open(array('method' => 'POST', 'action' => array('friend.store', 'friend_id' => $user->id, 'user_id' => Auth::user()->id))) }}
                 {{ Form::submit('Add Friend', array('class' => 'friendBtn')) }}
                 {{ Form::close() }}
+        @endif
         @endif
 
 
